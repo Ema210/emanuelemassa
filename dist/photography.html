@@ -3,7 +3,7 @@
 <head>
 <title> Emanuele Massa - Portfolio </title>
 <link rel="icon" href="tab.png" type="image/png" sizes="5x5">
-<style>
+<style> 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,20 +57,33 @@ table {
 
 #nameimgtext{
   position: absolute;
-  top: 50%;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
     z-index:1;
-	filter: invert(100%);height:60px;
+	height:60px;
+	cursor: pointer;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-    z-index:0;
+body, html {
+  height: 100%;
+  margin: 0;
+      background-color:black;
+}
+
+.bg {
+  /* The image used */
+
+  background-image: url("backgroundphotographyimage.jpg");
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -79,14 +92,14 @@ table {
 </style>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,&display=swap');
-.snip1135 {
+.snip1135 {filter: invert(100%);
   font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
   z-index:2;
   position: absolute;
-  top: 59%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -141,9 +154,7 @@ table {
 .snip1135 .current a:after {
   max-width: 100%;
 }
-#myVideo {
-  pointer-events: none;
-}
+
 
 
 </style>
@@ -152,16 +163,15 @@ table {
 
 
 
-<img id="nameimgtext" src="textname.png">
+
+<img id="nameimgtext" onclick="location.href='home.html';" src="textname.png">
 <ul class="snip1135">
   <li><a href="#" onclick="location.href='video.html';" data-hover="Video">VIDEO</a></li>
   <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
   <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
-<video autoplay muted loop id="myVideo">
-  <source src="backgroundvideotest.mp4" type="video/mp4">
-</video>
 
+<div class="bg"></div>
 </body>
 
 </html>
