@@ -56,9 +56,7 @@ table {
 
 
 #nameimgtext{
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   transform: translate(-50%, -50%);
     z-index:1;
 	filter: invert(100%);height:60px;
@@ -85,9 +83,7 @@ table {
   text-transform: uppercase;
   font-weight: 500;
   z-index:2;
-  position: absolute;
-  top: 59%;
-  left: 50%;
+  position: relative;
   transform: translate(-50%, -50%);
 }
 .snip1135 * {
@@ -144,13 +140,14 @@ table {
 #myVideo {
   pointer-events: none;
 }
-
+#logoandmenu{position:absolute;top:50%; left:50%; 
+}
 
 </style>
 </head>
 <body>
 
-
+<div id="logoandmenu">
 
 <img id="nameimgtext" src="textname.png">
 <ul class="snip1135">
@@ -158,6 +155,7 @@ table {
   <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
   <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
+</div>
 <video autoplay muted loop id="myVideo">
   <source src="backgroundvideotest.mp4" type="video/mp4">
 </video>

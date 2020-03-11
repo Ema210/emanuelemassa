@@ -56,15 +56,11 @@ table {
 
 
 #nameimgtext{
-  position: absolute;
-  top: 12%;
-  left: 50%;
+  position: relative;
   transform: translate(-50%, -50%);
     z-index:1;
-	height:60px;
-	cursor: pointer;
+	height:60px;cursor:pointer;
 }
-
 body, html {
   height: 100%;
   margin: 0;
@@ -92,15 +88,14 @@ body, html {
 </style>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,&display=swap');
-.snip1135 {filter: invert(100%);
+.snip1135 {
   font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
   z-index:2;
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  filter: invert(100%);
+  position: relative;
   transform: translate(-50%, -50%);
 }
 .snip1135 * {
@@ -154,7 +149,8 @@ body, html {
 .snip1135 .current a:after {
   max-width: 100%;
 }
-
+#logoandmenu{position:absolute;top:10%; left:50%; 
+}
 
 
 </style>
@@ -164,12 +160,15 @@ body, html {
 
 
 
+<div id="logoandmenu">
+
 <img id="nameimgtext" onclick="location.href='home.html';" src="textname.png">
 <ul class="snip1135">
   <li><a href="#" onclick="location.href='video.html';" data-hover="Video">VIDEO</a></li>
   <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
   <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
+</div>
 
 <div class="bg"></div>
 </body>
