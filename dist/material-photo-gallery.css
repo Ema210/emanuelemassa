@@ -9,6 +9,7 @@ h2{color:red}
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+	scrollbar-width: none;
 }
 
 @keyframes fadein {
