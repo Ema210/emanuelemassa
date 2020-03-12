@@ -154,20 +154,91 @@ body, html {
 #logoandmenu{position:absolute;top:10%; left:50%; 
 }
 #social{
-height:20px;
-widht:100%;
 position: absolute;
-top:90%;
-right:5%;
-
+width:auto;
+height:30px;
+top:95%;
+z-index:2;
+left:50%;
+text-align:center;  align-items: center;
+  justify-content: center;transform: translate(-50%, -50%);
 }
 
 #socialimage{
-height:120%;
-position relative;
+height:20px;
+  position: relative;
+
 
 }
 
+#profilepic{
+
+height:250px;
+widht:100%;
+position: absolute;
+top:15%;
+right:5%;
+ z-index:2;
+}
+
+
+#maindivabout {
+
+overflow: hidden; 
+overflow:auto; 
+height:65%;
+ width:80%;
+ left:10%;
+ position:fixed;
+ top:25%;
+ z-index:1;
+}
+
+#backgroundaboutme{
+background-color:white;
+opacity:0.8;
+ overflow: hidden; 
+overflow:auto; 
+height:65%;
+ width:70%;
+ left:18%;
+ position:fixed;
+ top:25%;
+ z-index:1;
+
+}
+
+#ptext{
+margin:auto;
+color:black;
+padding:5%;
+padding-left:15%;
+width:40%;
+position:absolute;
+opacity:1;
+ z-index:2;
+font-family: arial;
+font-size: 18px;
+
+
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#myVideo {
+  position: fixed;
+  right: 10;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+    z-index:0;
+}
+
+#myVideo {
+  pointer-events: none;
+}
 </style>
 </head>
 <body onload="document.body.style.opacity='1'"> 
@@ -185,13 +256,45 @@ position relative;
   <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
 </div>
+
+<div id="maindivabout">
+<div id="ptext">
+
+<p>
+​
+
+Creative Digital Media student and filmmaker
+
+in Cork Institute of Technology from Sardinia, Italy.
+
+I have a wide variety of skills in particular in video making, photography, sound design and visual effects.
+
+​
+
+My films have been projected in different film festival: Indie Cork Film Festival(Artsy), Youghal Film festival (Winner Young Adults),
+
+Passaggi d'Autore film festival, Premio Cenottanta.
+</p> 
+</div>
+<div id="backgroundaboutme">
+
+
+</div>
+
+
+<img id="profilepic" src="profilepic.png"/>
+</div>
+
+
 <div id="social">
 <img id="socialimage" src="instagram.png"/>
 <img id="socialimage" src="vimeo.png"/>
 <img id="socialimage" src="linkedin.png"/>
 <img id="socialimage" src="youtube.png"/>
 </div>
-<div class="bg"></div>
+<video autoplay muted loop id="myVideo">
+  <source src="test2.mp4" type="video/mp4">
+</video>
 </body>
 
 </html>

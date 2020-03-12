@@ -67,12 +67,15 @@ table {
 }
 
 #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-    z-index:0;
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
@@ -148,17 +151,19 @@ table {
 }
 
 #social{
-height:20px;
-widht:100%;
 position: absolute;
-top:90%;
-right:5%;
-
+width:auto;
+height:30px;
+top:68%;
+left:50%;
+text-align:center;  align-items: center;
+  justify-content: center;transform: translate(-50%, -50%);
 }
 
 #socialimage{
-height:120%;
-position relative;
+height:20px;
+  position: relative;
+
 
 }
 </style>

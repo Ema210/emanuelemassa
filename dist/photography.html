@@ -156,19 +156,34 @@ body, html {
 }
 
 #social{
-height:20px;
-widht:100%;
+z-index:2;
 position: absolute;
-top:90%;
-right:5%;
-filter: invert(100%);
-
+width:auto;
+height:30px;
+top:95%;
+left:50%;
+text-align:center;  align-items: center;
+  justify-content: center;transform: translate(-50%, -50%);
+  filter: invert(100%);
 }
 
 #socialimage{
-height:120%;
-position relative;
+height:20px;
+  position: relative;
 
+
+}
+
+#myVideo {
+  pointer-events: none;
+}
+
+#myVideo {
+  position: fixed;
+  right: 10;
+  bottom: 50;
+  min-height: 100%; 
+    z-index:0;
 }
 </style>
 </head>
@@ -232,8 +247,10 @@ position relative;
 			}
 		</style>
 
-<div class="bg"></div>
-		<div class="m-p-g">
+<video autoplay muted loop id="myVideo">
+  <source src="backdune.mp4" type="video/mp4">
+</video>
+		<div class="m-p-g" >
 			<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 				<img src="photographyimages/1.jpg" data-full="photographyimages/1.jpg" class="m-p-g__thumbs-img" />
 				<img src="photographyimages/2.jpg"  data-full="photographyimages/2.jpg" class="m-p-g__thumbs-img" />
