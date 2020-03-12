@@ -3,6 +3,7 @@
 <head>
 <title> Emanuele Massa - Portfolio </title>
 <link rel="icon" href="tab.png" type="image/png" sizes="5x5">
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap" rel="stylesheet">
 <style> backgroundphotographyimage.jpg
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -160,8 +161,11 @@ height:30px;
 top:95%;
 z-index:2;
 left:50%;
+filter: invert(100%);
 text-align:center;  align-items: center;
   justify-content: center;transform: translate(-50%, -50%);
+  filter: drop-shadow(0 1px 1px black) 
+          drop-shadow(1px 1px 0 black);
 }
 
 #socialimage{
@@ -173,12 +177,12 @@ height:20px;
 
 #profilepic{
 
-height:250px;
+height:220px;
 widht:100%;
 position: absolute;
-top:15%;
-right:5%;
- z-index:2;
+top:22%;
+right:0%;
+ z-index:5;
 }
 
 
@@ -187,53 +191,55 @@ right:5%;
 overflow: hidden; 
 overflow:auto; 
 height:65%;
- width:80%;
- left:10%;
+ width:75%;
  position:fixed;
  top:25%;
  z-index:1;
 }
+#ptext{
+margin:auto;
+left:5%;
+line-height: 20pt;
+color:black;
+padding:5%;
+width:40%;
+position:relative;
+opacity:1;
+ z-index:2;
+font-family: raleway;
 
+
+}
 #backgroundaboutme{
 background-color:white;
-opacity:0.8;
+opacity:0.7;
  overflow: hidden; 
 overflow:auto; 
 height:65%;
- width:70%;
- left:18%;
+ width:60%;
+ left:20%;
  position:fixed;
  top:25%;
  z-index:1;
 
 }
 
-#ptext{
-margin:auto;
-color:black;
-padding:5%;
-padding-left:15%;
-width:40%;
-position:absolute;
-opacity:1;
- z-index:2;
-font-family: arial;
-font-size: 18px;
 
-
-}
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 #myVideo {
-  position: fixed;
-  right: 10;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-    z-index:0;
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 #myVideo {
@@ -259,22 +265,31 @@ font-size: 18px;
 
 <div id="maindivabout">
 <div id="ptext">
-
+<h1 style="color:#16475a; font-size:23px; font-weight: bold;">ABOUT ME</h1><br>
+<h1 style="  font-size:17px; font-weight: bold;" > Filmmaker / Creative Digital Media Graduate </h1>
+<br>
 <p>
 ​
 
 Creative Digital Media student and filmmaker
 
 in Cork Institute of Technology from Sardinia, Italy.
-
+<br>
 I have a wide variety of skills in particular in video making, photography, sound design and visual effects.
 
-​
+​<br>
 
 My films have been projected in different film festival: Indie Cork Film Festival(Artsy), Youghal Film festival (Winner Young Adults),
 
-Passaggi d'Autore film festival, Premio Cenottanta.
-</p> 
+Passaggi d'Autore film festival, Premio Cenottanta, Story CIT.
+<br><br>
+<br></p> 
+<h1 style="  font-size:17px; font-weight: bold;" > CONTACTS </h1>
+<p>
+Email | massaemanuele@hotmail.com<br>
+Phone Number | +39 3406229442 - +353 0838841731
+</p>
+
 </div>
 <div id="backgroundaboutme">
 
@@ -287,10 +302,10 @@ Passaggi d'Autore film festival, Premio Cenottanta.
 
 
 <div id="social">
-<img id="socialimage" src="instagram.png"/>
-<img id="socialimage" src="vimeo.png"/>
-<img id="socialimage" src="linkedin.png"/>
-<img id="socialimage" src="youtube.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='http://instagram.com/_ema210'"src="instagram.png"/>
+<img id="socialimage"style="cursor:pointer;"onclick="window.location.href='http://vimeo.com/emanuelemassa'" src="vimeo.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
 </div>
 <video autoplay muted loop id="myVideo">
   <source src="test2.mp4" type="video/mp4">
