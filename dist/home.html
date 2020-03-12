@@ -37,7 +37,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-}
+    opacity: 0; 
+	background-color:black;
+    transition: opacity 0.5s; 
+} 
+
 ol, ul {
 	list-style: none;
 }
@@ -143,9 +147,23 @@ table {
 #logoandmenu{position:absolute;top:50%; left:50%; 
 }
 
+#social{
+height:20px;
+widht:100%;
+position: absolute;
+top:90%;
+right:5%;
+
+}
+
+#socialimage{
+height:120%;
+position relative;
+
+}
 </style>
 </head>
-<body>
+<body onload="document.body.style.opacity='1'"> 
 
 <div id="logoandmenu">
 
@@ -159,7 +177,12 @@ table {
 <video autoplay muted loop id="myVideo">
   <source src="backgroundvideotest.mp4" type="video/mp4">
 </video>
-
+<div id="social">
+<img id="socialimage" src="instagram.png"/>
+<img id="socialimage" src="vimeo.png"/>
+<img id="socialimage" src="linkedin.png"/>
+<img id="socialimage" src="youtube.png"/>
+</div>
 </body>
 
 </html>
