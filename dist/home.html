@@ -2,6 +2,7 @@
 <html>
 <head>
 <title> Emanuele Massa - Portfolio </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="tab.png" type="image/png" sizes="5x5">
 <style>
 
@@ -72,7 +73,7 @@ table {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
@@ -165,6 +166,12 @@ height:20px;
 
 
 }
+
+@media only screen and (max-width: 600px) {
+  #logoandmenu{
+   width:100%;
+  }
+}
 </style>
 </head>
 <body onload="document.body.style.opacity='1'"> 
@@ -177,12 +184,8 @@ height:20px;
   <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
   <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
-<div id="social">
-<img id="socialimage" src="instagram.png"/>
-<img id="socialimage" src="vimeo.png"/>
-<img id="socialimage" src="linkedin.png"/>
-<img id="socialimage" src="youtube.png"/>
-</div>
+
+
 </div>
 <video autoplay muted loop id="myVideo">
   <source src="backgroundvideotest.mp4" type="video/mp4">
