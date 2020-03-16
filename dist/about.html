@@ -69,6 +69,7 @@ table {
 }
 
 body, html {
+
   height: 100%;
   margin: 0;
       background-color:black;
@@ -194,8 +195,18 @@ position: relative;
  float:right; margin-left:100px;padding-bottom:10%;
 }
 
-#maindivabout {
+#arrowblack{
+cursor:pointer;
+height:40px;
+widht:100%;
+bottom:10%;
+right:48.5%;
+position: fixed;
+ z-index:2;
+}
 
+#maindivabout {
+ scroll-behavior: smooth;
 overflow: hidden; 
 overflow:auto; 
 float:left;
@@ -228,7 +239,7 @@ opacity:0.7;
  overflow: hidden; 
 overflow:auto; 
 height:65%;
- width:50%;
+ width:55%;
  left:23%;
  position:fixed;
  top:25%;
@@ -299,12 +310,14 @@ My films have been projected in different film festival: Indie Cork Film Festiva
 Passaggi d'Autore film festival, Premio Cenottanta, Story CIT.
 <br><br>
 <br></p> 
-<h1 style="  font-size:17px; font-weight: bold;" > CONTACTS </h1>
+<h1 id ="section2"style="  font-size:17px; font-weight: bold;" > CONTACTS </h1>
 <p><img id="cvlogo" onclick="window.open('cvtestwebsite.pdf'); return true; "src="cvlogo.png"/>
 Email | massaemanuele@hotmail.com<br>
 Phone Number | +39 3406229442 - +353 0838841731
 </p>
-
+<a href="#section2" > <img onclick="arrowgone()"id="arrowblack" src="arrowblack.png"/></a>
+<script> function arrowgone(){document.getElementById("arrowblack").src = "lineblack.png";}
+</script>
 </div>
 <div id="backgroundaboutme">
 

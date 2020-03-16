@@ -3,6 +3,7 @@
 <head>
 <title> Emanuele Massa - Portfolio </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap" rel="stylesheet">
 <link rel="icon" href="tab.png" type="image/png" sizes="5x5">
 <style> backgroundphotographyimage.jpg
 
@@ -74,7 +75,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("backgroundvideopage.jpg");
+  background-image: url("photographyimages/4.jpg");
 
   /* Full height */
   height: 100%; 
@@ -158,8 +159,9 @@ body, html {
 position: absolute;
 width:auto;
 height:30px;
-top:95%;
+top:94%;
 left:50%;
+margin-top:15px;
 text-align:center;  align-items: center;
   justify-content: center;transform: translate(-50%, -50%);
 }
@@ -170,15 +172,98 @@ height:20px;
 
 
 }
+#titleshortfilms{
+
+position:absolute;
+top:50%;
+left:30%;
+color:white;
+ z-index:5;
+  font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
+ font-weight:bold;
+ font-size:25px;
+}
+
+#titlestockfootage{
+
+position:absolute;
+top:50%;
+left:60%;
+color:white;
+ z-index:5;
+     font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
+ font-weight:bold;
+ font-size:25px;
+}
+
+#maindivvideo{
+position:absolute;
+width:900px;
+height:550px;
+top:42%;
+left:50%;
+margin-top:-220px;
+margin-left:-450px;
+
+}
+.ergosum{
+
+position:absolute;
+left:130px;
+top:100px;
+}
+
+#leftarrow{
+position:absolute;
+top:50%;
+left:9%;
+z-index:16;
+
+}
+#rightarrow{
+position:absolute;
+top:50%;
+right:9%;
+z-index:16;
+}
 
 
+.textdivppp{
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+width:900px;
+max-height: 50px;
+overflow: hidden;
+color:white;
+
+}
+.plus{
+text-align:center;
+position: absolute;
+font-family:raleway;
+color:white;
+left:50%;
+margin-left:-25px;
+bottom:-30px;
+width:900px;
+
+}
+
+.paragraphvideo {
+font-family: raleway;
+text-align:left;  align-items: center;
+  justify-content: center;
+
+  line-height:30px;
+width:650px;
+font-size:16px;
+
+}
 </style>
 </head>
 <body onload="document.body.style.opacity='1'"> 
-
-
-
-
 
 <div id="logoandmenu">
 
@@ -190,13 +275,156 @@ height:20px;
 </ul>
 </div>
 
+
+<div id="maindivvideo">
+<img onclick="leftarrow()"id="leftarrow" src="leftblack.png"/>
+<img onclick="rightarrow()"id="rightarrow" src="rightblack.png"/>
+<script> function arrowgone(){document.getElementById("leftarrow").src = "lineblack.png";}
+</script>
+
+<img id="ergosumthumb" onclick="thumbnailgone()"class="ergosum"src="ergosum.jpg" style="z-index:11;" width="640" height="360" onclick=""/>
+
+<iframe  id="ergosumvimeo" class="ergosum" src="https://player.vimeo.com/video/362417650?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<div id="titleergosum" class="textdivppp">
+<p style="font-size:18px; font-weight:bold;"> Ergo Sum</p>
+<br>
+<p style="font-size:13px; font-weight:medium;">Directed, Edited, Written, Scored, and Produced</p><br><br>
+<p class="paragraphvideo">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br> 
+</p>
+</div>
+<img id="plus"class="plus"onclick="ergosumgone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
+<script>
+var nc =0;
+function ergosumgone(){
+
+
+if (nc % 2 == 0) {
+document.getElementById("plus").src = "meno.png";
+document.getElementById("leftarrow").className ='classname';
+document.getElementById("titleergosum").className ='titlegoingup';
+document.getElementById("rightarrow").className ='classnamearrowin';
+document.getElementById("ergosumthumb").className ='classname';
+document.getElementById("ergosumvimeo").className ='classname';
+
+
+nc++;
+}
+else {
+document.getElementById("leftarrow").className ='classname2';
+document.getElementById("plus").src = "plus.png";
+document.getElementById("titleergosum").className ='titlegoingdown';
+document.getElementById("rightarrow").className ='classnamearrowout';
+document.getElementById("ergosumthumb").className ='classname2';
+document.getElementById("ergosumvimeo").className ='classname2';
+
+nc++;
+}
+}
+function thumbnailgone(){
+document.getElementById("ergosumthumb").style.visibility = "hidden";}
+
+</script>
+<style type="text/css">
+.classname {
+position:absolute;
+left:130px;
+top:100px;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+animation: 1s down-leave;
+}
+
+@keyframes down-leave {
+  0% { clip-path: inset(0); }
+  100% { clip-path: inset(0 0 100% 0); }
+}
+  .titlegoingup {
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+overflow: hidden;
+color:white;
+max-height:500px;
+animation: up 0.9s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes up {
+  0%   { left:13.9%; top:87%;}
+  100%  {left:13.9%; top:18%;}
+  
+  }
+    .titlegoingdown {
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+overflow: hidden;
+color:white;
+max-height:50px;
+animation: down 0.8s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-out;
+}
+
+@keyframes down {
+  0%   { left:13.9%; top:18%;}
+  100%  {left:13.9%; top:87%;}
+  
+  }
+  
+  
+  .classname2 {
+position:absolute;
+left:130px;
+top:100px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  animation: 1s down-enter;}
+  
+  @keyframes down-enter {
+  0% { clip-path: inset(0 0 100% 0); }
+  100% { clip-path: inset(0); }
+}
+  
+      .classnamearrowin {
+position:absolute;
+top:50%;
+right:9%;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 1s linear;}
+  
+    .classnamearrowout {
+position:absolute;
+top:50%;
+right:9%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;}
+
+</style>
+
+
+
+</div>
+
+<div class="bg"></div>
 <div id="social">
 <img id="socialimage" style="cursor:pointer;"onclick="window.location.href='http://instagram.com/_ema210'"src="instagram.png"/>
 <img id="socialimage"style="cursor:pointer;"onclick="window.location.href='http://vimeo.com/emanuelemassa'" src="vimeo.png"/>
 <img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
 <img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
 </div>
-<div class="bg"></div>
 </body>
 
 </html>
