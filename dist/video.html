@@ -172,6 +172,7 @@ height:20px;
 
 
 }
+
 #titleshortfilms{
 
 position:absolute;
@@ -184,19 +185,21 @@ color:white;
  font-size:25px;
 }
 
-#titlestockfootage{
 
+
+#maindivvideoergosum{
 position:absolute;
-top:50%;
-left:60%;
-color:white;
- z-index:5;
-     font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
- font-weight:bold;
- font-size:25px;
+
+width:900px;
+height:550px;
+top:42%;
+left:50%;
+margin-top:-220px;
+margin-left:-450px;
 }
 
-#maindivvideo{
+
+#maindivvideotempsperdu{
 position:absolute;
 width:900px;
 height:550px;
@@ -204,11 +207,15 @@ top:42%;
 left:50%;
 margin-top:-220px;
 margin-left:-450px;
-
 }
-.ergosum{
+
+
+
+.videocontainer{
 
 position:absolute;
+overflow:hidden;
+width:640px; height:360px;
 left:130px;
 top:100px;
 }
@@ -252,20 +259,34 @@ width:900px;
 }
 
 .paragraphvideo {
+overflow: hidden;
 font-family: raleway;
 text-align:left;  align-items: center;
   justify-content: center;
 
   line-height:30px;
 width:650px;
-font-size:16px;
+font-size:14px;
 
 }
+
 </style>
 </head>
 <body onload="document.body.style.opacity='1'"> 
-
+<div class="bg">
+</div>
+<div id="social">
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='http://instagram.com/_ema210'"src="instagram.png"/>
+<img id="socialimage"style="cursor:pointer;"onclick="window.location.href='http://vimeo.com/emanuelemassa'" src="vimeo.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
+</div>
 <div id="logoandmenu">
+<!--<iframe width="300" height="158"
+src="https://ak8.picdn.net/shutterstock/videos/1038800828/preview/stock-footage-sunset-sea-washing-rocks-pink-clouds.webm">
+</iframe>-->
+
+<!--SOCIAL-->
 
 <img id="nameimgtext" onclick="location.href='home.html';" src="textname.png">
 <ul class="snip1135">
@@ -276,47 +297,107 @@ font-size:16px;
 </div>
 
 
-<div id="maindivvideo">
-<img onclick="leftarrow()"id="leftarrow" src="leftblack.png"/>
-<img onclick="rightarrow()"id="rightarrow" src="rightblack.png"/>
-<script> function arrowgone(){document.getElementById("leftarrow").src = "lineblack.png";}
-</script>
+                                 <!-- ERGOSUM DIV -->
 
-<img id="ergosumthumb" onclick="thumbnailgone()"class="ergosum"src="ergosum.jpg" style="z-index:11;" width="640" height="360" onclick=""/>
 
-<iframe  id="ergosumvimeo" class="ergosum" src="https://player.vimeo.com/video/362417650?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
+<div id="maindivvideoergosum">
+<img onclick="leftarrowergosum()"id="leftarrow" src="leftblack.png"/>
+<img onclick="rightarrowergosum()"id="rightarrow" src="rightblack.png"/>
+
+
+
+<div class="videocontainer">
+<img id="ergosumthumb" onclick="thumbnailgoneergosum()"class="ergosum"src="ergosum.jpg" style="z-index:11;" width="640" height="360" onclick=""/>
+<iframe  id="ergosumvimeo"  src="https://player.vimeo.com/video/362417650?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+</div>
+<img id="plusergosum"class="plus"onclick="ergosumgone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
 <div id="titleergosum" class="textdivppp">
-<p style="font-size:18px; font-weight:bold;"> Ergo Sum</p>
+<p style="font-size:18px; font-weight:bold;"> Ergo Sum - Short Film (2018)</p>
 <br>
 <p style="font-size:13px; font-weight:medium;">Directed, Edited, Written, Scored, and Produced</p><br><br>
-<p class="paragraphvideo">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+<h1 class="paragraphvideo" >
+A short film about the examination of one's consciousness.</p><br>
+<span style=" font-weight:bold;">Film Type:</span> Experimental, Short <br>
+<span style=" font-weight:bold;">Genres:</span> Experimental, Drama <br>
+<span style=" font-weight:bold;">Runtime:</span> 8 minutes 5 seconds <br>
+<span style=" font-weight:bold;">Completion Date:</span> May 10, 2018 <br>
+<span style=" font-weight:bold;">Country of Origin:</span> Italy <br>
+<span style=" font-weight:bold;">Country of Filming:</span> Ireland, Italy <br>
+<span style=" font-weight:bold;">Shooting Format:</span> DSLR <br>
+<span style=" font-weight:bold;">Aspect Ratio:</span> 16:9 <br>
+<span style=" font-weight:bold;">Film Color:</span> Black & White and Color <br>
+<span style=" font-weight:bold;">First-time Filmmaker:</span> No<br>
+<span style=" font-weight:bold;">Student Project:</span> Yes<br>
+<p style="text-align:center">Film Festival Selections:</p><br>
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br> 
-</p>
+
+</h1>
+
 </div>
-<img id="plus"class="plus"onclick="ergosumgone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
+</div>
+
+                        <!-- TEMPS PERDU-->
+
+
+<div id="maindivvideotempsperdu" style="visibility: hidden;"  >
+<img onclick="leftarrowtempsperdu()"id="leftarrow" src="leftblack.png"/>
+<img onclick="rightarrowtempsperdu()"id="rightarrow" src="rightblack.png"/>
+
+<div id="videocontainer" class="videocontainer">
+<img id="tempsperduthumb" onclick="thumbnailgonetempsperdu()" src="tempsperdu.jpg" style="z-index:11;" width="640" height="360" />
+<iframe  id="tempsperduvimeo" " src="https://player.vimeo.com/video/316811910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<img id="plustempsperdu"class="plus"onclick="tempsperdugone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
+<div id="titletempsperdu" class="textdivppp">
+<p style="font-size:18px; font-weight:bold;"> Temps Perdu - Short Poem Film (2018)</p>
+<br>
+<p style="font-size:13px; font-weight:medium;">Directed, Edited, Written, and Produced</p><br><br>
+<h1 class="paragraphvideo" >
+A poemvideo.</p><br>
+<span style=" font-weight:bold;">Film Type:</span> Experimental, Short <br>
+<span style=" font-weight:bold;">Genres:</span> Experimental, Drama <br>
+<span style=" font-weight:bold;">Runtime:</span> 8 minutes 5 seconds <br>
+<span style=" font-weight:bold;">Completion Date:</span> May 10, 2018 <br>
+<span style=" font-weight:bold;">Country of Origin:</span> Italy <br>
+<span style=" font-weight:bold;">Country of Filming:</span> Ireland, Italy <br>
+<span style=" font-weight:bold;">Shooting Format:</span> DSLR <br>
+<span style=" font-weight:bold;">Aspect Ratio:</span> 16:9 <br>
+<span style=" font-weight:bold;">Film Color:</span> Black & White and Color <br>
+<span style=" font-weight:bold;">First-time Filmmaker:</span> No<br>
+<span style=" font-weight:bold;">Student Project:</span> Yes<br>
+<p style="text-align:center">Film Festival Selections:</p><br>
+
+
+
+</h1>
+
+</div>
+</div>
+
 <script>
 var nc =0;
+
+
 function ergosumgone(){
 
 
 if (nc % 2 == 0) {
-document.getElementById("plus").src = "meno.png";
+document.getElementById("plusergosum").src = "meno.png";
 document.getElementById("leftarrow").className ='classname';
 document.getElementById("titleergosum").className ='titlegoingup';
 document.getElementById("rightarrow").className ='classnamearrowin';
 document.getElementById("ergosumthumb").className ='classname';
 document.getElementById("ergosumvimeo").className ='classname';
 
-
 nc++;
 }
 else {
 document.getElementById("leftarrow").className ='classname2';
-document.getElementById("plus").src = "plus.png";
+document.getElementById("plusergosum").src = "plus.png";
 document.getElementById("titleergosum").className ='titlegoingdown';
 document.getElementById("rightarrow").className ='classnamearrowout';
 document.getElementById("ergosumthumb").className ='classname2';
@@ -325,15 +406,246 @@ document.getElementById("ergosumvimeo").className ='classname2';
 nc++;
 }
 }
-function thumbnailgone(){
+function thumbnailgoneergosum(){
 document.getElementById("ergosumthumb").style.visibility = "hidden";}
+
+function rightarrowergosum(){
+document.getElementById("ergosumthumb").className ='rightchangeout';
+document.getElementById("ergosumvimeo").className ='rightchangeout';
+document.getElementById("titleergosum").className ='titlegoingrightout';
+setTimeout(function(){ 
+document.getElementById("maindivvideoergosum").style.visibility = "hidden"; 
+document.getElementById("maindivvideotempsperdu").style.visibility = "visible";
+document.getElementById("tempsperduthumb").className ='rightchangein';
+document.getElementById("tempsperduvimeo").className ='rightchangein';
+document.getElementById("titletempsperdu").className ='titlegoingrightin'; }, 900);
+}
+function leftarrowergosum(){
+document.getElementById("maindivvideoergosum").style.visibility = "hidden";
+document.getElementById("maindivsespropriu").style.visibility = "visible";
+}
+
+function tempsperdugone(){
+
+
+if (nc % 2 == 0) {
+document.getElementById("plustempsperdu").src = "meno.png";
+document.getElementById("leftarrow").className ='classname';
+document.getElementById("titletempsperdu").className ='titlegoingup';
+document.getElementById("rightarrow").className ='classnamearrowin';
+document.getElementById("tempsperduthumb").className ='classname';
+document.getElementById("tempsperduvimeo").className ='classname';
+
+nc++;
+}
+else {
+document.getElementById("plustempsperdu").src = "plus.png";
+document.getElementById("leftarrow").className ='classname2';
+document.getElementById("titletempsperdu").className ='titlegoingdown';
+document.getElementById("rightarrow").className ='classnamearrowout';
+document.getElementById("tempsperduthumb").className ='classname2';
+document.getElementById("tempsperduvimeo").className ='classname2';
+
+nc++;
+}
+}
+function thumbnailgonetempsperdu(){
+document.getElementById("tempsperduthumb").style.visibility = "hidden";}
+
+function leftarrowtempsperdu(){
+document.getElementById("tempsperduthumb").className ='leftchangeout';
+document.getElementById("tempsperduvimeo").className ='leftchangeout';
+document.getElementById("titletempsperdu").className ='titlegoingleftout';
+setTimeout(function(){ 
+document.getElementById("maindivvideotempsperdu").style.visibility = "hidden"; 
+document.getElementById("maindivvideoergosum").style.visibility = "visible";
+document.getElementById("ergosumthumb").className ='leftchangein';
+document.getElementById("ergosumvimeo").className ='leftchangein';
+document.getElementById("titleergosum").className ='titlegoingleftin'; }, 900);
+}
 
 </script>
 <style type="text/css">
+
+                      /* RIGHT ARROW IN */
+					  
+.rightchangein {
+position:absolute;
+visibility: visible;
+  opacity: 1;
+  transition: visibility 1s 0s, opacity 0s ease-in-out;
+animation: 1s rightchangeanimationin;
+}
+
+  .titlegoingrightin {
+	
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+visibility: visible;
+  opacity: 1;
+overflow: hidden;
+color:white;
+width:350px;
+height:50px;
+animation: rightin 0.9s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes rightin {
+  0%   { left:0%; top:88%;}
+  100%  {left:30%; top:88%;}
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0); } 
+  
+  }
+
+
+@keyframes rightchangeanimationin {
+  0%   { left:-30%; top:0%;}
+  100%  {left:0%; top:0%;}
+  
+}
+  
+  
+                      /* RIGHT ARROW OUT ONCLICK */
+
+
+.rightchangeout {
+position:absolute;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+animation: 1s rightchangeanimation;
+}
+
+  .titlegoingrightout {
+	
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+overflow: hidden;
+color:white;
+width:200px;
+animation: right 0.9s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes right {
+  0%   { left:40%; top:88%;}
+  100%  {left:65%; top:88%;}
+    0% { clip-path: inset(0); }
+  100% { clip-path: inset(0 0 0 100%); }
+  
+  }
+
+
+@keyframes rightchangeanimation {
+  0%   { left:0%; top:0%;}
+  100%  {left:60%; top:0%;}
+}
+
+
+/* LEFT ARROW */
+
+.leftchangein {
+position:absolute;
+visibility: visible;
+  opacity: 1;
+  transition: visibility 1s 0s, opacity 0s ease-in-out;
+animation: 1s leftchangeanimationin;
+}
+
+  .titlegoingleftin {
+	
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+visibility: visible;
+  opacity: 1;
+overflow: hidden;
+color:white;
+width:350px;
+height:50px;
+animation: leftin 0.9s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes leftin {
+  0%   { right:0%; top:88%;}
+  100%  {right:30%; top:88%;}
+  0% { clip-path: inset(0 0 0 100%); }
+  100% { clip-path: inset(0); } 
+  
+  }
+
+
+@keyframes leftchangeanimationin {
+  0%   { right:-30%; top:0%;}
+  100%  {right:0%; top:0%;}
+  
+}
+  
+  
+                      /* LEFT ARROW OUT ONCLICK */
+
+
+.leftchangeout {
+position:absolute;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+animation: 1s leftchangeanimation;
+}
+
+  .titlegoingleftout {
+	
+text-align:center;
+position: absolute;
+font-family:raleway;
+bottom:22px;
+overflow: hidden;
+color:white;
+width:200px;
+animation: left 0.9s linear;
+animation-fill-mode: forwards;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes left {
+  0%   { right:40%; top:88%;}
+  100%  {right:65%; top:88%;}
+    0% { clip-path: inset(0); }
+  100% { clip-path: inset(0 100% 0 0); }
+  
+  }
+
+
+@keyframes leftchangeanimation {
+  0%   { right:0%; top:0%;}
+  100%  {right:60%; top:0%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .classname {
 position:absolute;
-left:130px;
-top:100px;
 visibility: hidden;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s ease-in-out;
@@ -345,16 +657,34 @@ animation: 1s down-leave;
   100% { clip-path: inset(0 0 100% 0); }
 }
   .titlegoingup {
+	
 text-align:center;
 position: absolute;
 font-family:raleway;
 bottom:22px;
-overflow: hidden;
+overflow-y: scroll;
 color:white;
 max-height:500px;
 animation: up 0.9s linear;
 animation-fill-mode: forwards;
 animation-timing-function: ease-in-out;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height:20px;opacity:0.6;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1b1b1b;  border-radius: 10px;
+    opacity:0.6;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+  border-radius: 10px;
+  opacity:0.6;
 }
 
 @keyframes up {
@@ -384,8 +714,6 @@ animation-timing-function: ease-out;
   
   .classname2 {
 position:absolute;
-left:130px;
-top:100px;
   visibility: visible;
   opacity: 1;
   transition: opacity 1s ease-in-out;
@@ -416,15 +744,10 @@ right:9%;
 
 
 
-</div>
 
-<div class="bg"></div>
-<div id="social">
-<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='http://instagram.com/_ema210'"src="instagram.png"/>
-<img id="socialimage"style="cursor:pointer;"onclick="window.location.href='http://vimeo.com/emanuelemassa'" src="vimeo.png"/>
-<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
-<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
-</div>
+
+
+
 </body>
 
 </html>
