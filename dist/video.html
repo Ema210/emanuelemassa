@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <title> Emanuele Massa - Portfolio </title>
@@ -209,8 +210,34 @@ margin-top:-220px;
 margin-left:-450px;
 }
 
+#maindivvideoespropriu{
+position:absolute;
+width:900px;
+height:550px;
+top:42%;
+left:50%;
+margin-top:-220px;
+margin-left:-450px;
+}
+#maindivvideos8{
+position:absolute;
+width:900px;
+height:550px;
+top:40%;
+left:50%;
+margin-top:-220px;
+margin-left:-450px;
+}
 
-
+#maindivvideostockfootage{
+position:absolute;
+width:900px;
+height:550px;
+top:40%;
+left:50%;
+margin-top:-220px;
+margin-left:-450px;
+}
 .videocontainer{
 
 position:absolute;
@@ -219,15 +246,33 @@ width:640px; height:360px;
 left:130px;
 top:100px;
 }
+#videocontainerstockfootage{
+padding-left:15px;
+padding-top:15px;
+padding-bottom:10px;
+padding-right:15px;
+background-color:black;
+border-radius: 25px;
+position:absolute;
+text-align:center;
+overflow-y:scroll;
+align-items: center;
+  justify-content: center;
 
-#leftarrow{
+width:640px; 
+height:360px;
+left:120px;
+top:100px;
+}
+
+.leftarrow{
 position:absolute;
 top:50%;
 left:9%;
 z-index:16;
 
 }
-#rightarrow{
+.rightarrow{
 position:absolute;
 top:50%;
 right:9%;
@@ -302,13 +347,13 @@ src="https://ak8.picdn.net/shutterstock/videos/1038800828/preview/stock-footage-
 
 
 <div id="maindivvideoergosum">
-<img onclick="leftarrowergosum()"id="leftarrow" src="leftblack.png"/>
-<img onclick="rightarrowergosum()"id="rightarrow" src="rightblack.png"/>
+<img onclick="leftarrowergosum()" class="leftarrow "id="leftarrowergosum" src="leftblack.png"/>
+<img onclick="rightarrowergosum()" class="rightarrow "id="rightarrowergosum" src="rightblack.png"/>
 
 
 
 <div class="videocontainer">
-<img id="ergosumthumb" onclick="thumbnailgoneergosum()"class="ergosum"src="ergosum.jpg" style="z-index:11;" width="640" height="360" onclick=""/>
+<img id="ergosumthumb" onclick="thumbnailgoneergosum()"src="ergosum.jpg" style="z-index:11;" width="640" height="360" onclick=""/>
 <iframe  id="ergosumvimeo"  src="https://player.vimeo.com/video/362417650?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 </div>
@@ -343,8 +388,8 @@ A short film about the examination of one's consciousness.</p><br>
 
 
 <div id="maindivvideotempsperdu" style="visibility: hidden;"  >
-<img onclick="leftarrowtempsperdu()"id="leftarrow" src="leftblack.png"/>
-<img onclick="rightarrowtempsperdu()"id="rightarrow" src="rightblack.png"/>
+<img onclick="leftarrowtempsperdu()"class="leftarrow "id="leftarrowtempsperdu" src="leftblack.png"/>
+<img onclick="rightarrowtempsperdu()" class="rightarrow "id="rightarrowtempsperdu" src="rightblack.png"/>
 
 <div id="videocontainer" class="videocontainer">
 <img id="tempsperduthumb" onclick="thumbnailgonetempsperdu()" src="tempsperdu.jpg" style="z-index:11;" width="640" height="360" />
@@ -378,37 +423,152 @@ A poemvideo.</p><br>
 </div>
 </div>
 
+                        <!-- ESPROPRIU-->
+
+
+<div id="maindivvideoespropriu" style="visibility: hidden;"  >
+<img onclick="leftarrowespropriu()" class="leftarrow "id="leftarrowespropriu" src="leftblack.png"/>
+<img onclick="rightarrowespropriu()" class="rightarrow "id="rightarrowespropriu" src="rightblack.png"/>
+
+<div id="videocontainer" class="videocontainer">
+<img id="espropriuthumb" onclick="thumbnailgoneespropriu()" src="espropriu.jpg" style="z-index:11;" width="640" height="360" />
+<iframe  id="espropriuvimeo" " src="https://player.vimeo.com/video/398533531?title=0&byline=0&portrait=0" width="640" height="360" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<img id="plusespropriu"class="plus"onclick="espropriugone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
+<div id="titleespropriu" class="textdivppp">
+<p style="font-size:18px; font-weight:bold;"> S'Espropriu - Documentary Short Film (2020)</p>
+<br>
+<p style="font-size:13px; font-weight:medium;">Directed, Edited and Produced</p><br><br>
+<h1 class="paragraphvideo" >
+espropriuespropriu.</p><br>
+<span style=" font-weight:bold;">Film Type:</span> Experimental, Short <br>
+<span style=" font-weight:bold;">Genres:</span> Experimental, Drama <br>
+<span style=" font-weight:bold;">Runtime:</span> 8 minutes 5 seconds <br>
+<span style=" font-weight:bold;">Completion Date:</span> May 10, 2018 <br>
+<span style=" font-weight:bold;">Country of Origin:</span> Italy <br>
+<span style=" font-weight:bold;">Country of Filming:</span> Ireland, Italy <br>
+<span style=" font-weight:bold;">Shooting Format:</span> DSLR <br>
+<span style=" font-weight:bold;">Aspect Ratio:</span> 16:9 <br>
+<span style=" font-weight:bold;">Film Color:</span> Black & White and Color <br>
+<span style=" font-weight:bold;">First-time Filmmaker:</span> No<br>
+<span style=" font-weight:bold;">Student Project:</span> Yes<br>
+<p style="text-align:center">Film Festival Selections:</p><br>
+
+
+
+</h1>
+
+</div>
+
+                        <!-- S8-->
+
+
+<div id="maindivvideos8" style="visibility: hidden;"  >
+<img onclick="leftarrows8()" class="leftarrow "id="leftarrows8" src="leftblack.png"/>
+<img onclick="rightarrows8()" class="rightarrow "id="rightarrows8" src="rightblack.png"/>
+
+<div id="videocontainer" class="videocontainer">
+<img id="s8thumb" onclick="thumbnailgones8()" src="s8.jpg" style="z-index:11;" width="640" height="360" />
+<iframe  id="s8vimeo" " src="https://www.youtube.com/embed/yJL9gNsT_Ww" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<img id="pluss8"class="plus"onclick="s8gone()"style="margin-bottom:10px; height:50px; width:auto;"src="plus.png"/>
+<div id="titles8" class="textdivppp">
+<p style="font-size:18px; font-weight:bold;"> Gilbert's Dead - Music video(2019)</p>
+<br>
+<p style="font-size:13px; font-weight:medium;">Cinematographer and scriptwriter</p><br><br>
+<h1 class="paragraphvideo" >
+s8s8.</p><br>
+<span style=" font-weight:bold;">Film Type:</span> Experimental, Short <br>
+<span style=" font-weight:bold;">Genres:</span> Experimental, Drama <br>
+<span style=" font-weight:bold;">Runtime:</span> 8 minutes 5 seconds <br>
+<span style=" font-weight:bold;">Completion Date:</span> May 10, 2018 <br>
+<span style=" font-weight:bold;">Country of Origin:</span> Italy <br>
+<span style=" font-weight:bold;">Country of Filming:</span> Ireland, Italy <br>
+<span style=" font-weight:bold;">Shooting Format:</span> DSLR <br>
+<span style=" font-weight:bold;">Aspect Ratio:</span> 16:9 <br>
+<span style=" font-weight:bold;">Film Color:</span> Black & White and Color <br>
+<span style=" font-weight:bold;">First-time Filmmaker:</span> No<br>
+<span style=" font-weight:bold;">Student Project:</span> Yes<br>
+<p style="text-align:center">Film Festival Selections:</p><br>
+
+
+
+</h1>
+
+</div>
+
+
+
+     <!-- Stockfootage-->
+
+
+<div id="maindivvideostockfootage" style="visibility: hidden;"  >
+<img onclick="leftarrowstockfootage()" class="leftarrow "id="leftarrowstockfootage" src="leftblack.png"/>
+<img onclick="rightarrowstockfootage()" class="rightarrow "id="rightarrowstockfootage" src="rightblack.png"/>
+
+<div id="videocontainerstockfootage" class="videocontainerstockfootage">
+
+<video width="auto" height="158"  autoplay loop muted playsinline> <source    id="stockfootagevimeo"  src="1.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="2.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="3.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="4.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="5.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="6.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="7.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="8.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="9.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="11.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="12.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="13.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
+</div>
+
+
+<div id="titlestockfootage" class="textdivppp">
+<p style="font-size:18px; font-weight:bold;"> STOCK FOOTAGE</p>
+<br>
+<p style="font-size:13px; font-weight:medium;"></p><br><br>
+
+</div>
+</div>
 <script>
 var nc =0;
 
-
+                   // ERGOSUM
+				   
 function ergosumgone(){
 
 
 if (nc % 2 == 0) {
 document.getElementById("plusergosum").src = "meno.png";
-document.getElementById("leftarrow").className ='classname';
+document.getElementById("leftarrowergosum").className ='leftarrowgone';
 document.getElementById("titleergosum").className ='titlegoingup';
-document.getElementById("rightarrow").className ='classnamearrowin';
+document.getElementById("rightarrowergosum").className ='rightarrowgone';
 document.getElementById("ergosumthumb").className ='classname';
 document.getElementById("ergosumvimeo").className ='classname';
 
 nc++;
 }
 else {
-document.getElementById("leftarrow").className ='classname2';
+document.getElementById("leftarrowergosum").className ='leftarrowcome';
 document.getElementById("plusergosum").src = "plus.png";
 document.getElementById("titleergosum").className ='titlegoingdown';
-document.getElementById("rightarrow").className ='classnamearrowout';
+document.getElementById("rightarrowergosum").className ='rightarrowcome';
 document.getElementById("ergosumthumb").className ='classname2';
 document.getElementById("ergosumvimeo").className ='classname2';
 
 nc++;
 }
 }
+
+                      
+					  
 function thumbnailgoneergosum(){
 document.getElementById("ergosumthumb").style.visibility = "hidden";}
 
+
+// RIGH ARROW ERGOSUM  --> TempsPerdu
 function rightarrowergosum(){
 document.getElementById("ergosumthumb").className ='rightchangeout';
 document.getElementById("ergosumvimeo").className ='rightchangeout';
@@ -416,23 +576,44 @@ document.getElementById("titleergosum").className ='titlegoingrightout';
 setTimeout(function(){ 
 document.getElementById("maindivvideoergosum").style.visibility = "hidden"; 
 document.getElementById("maindivvideotempsperdu").style.visibility = "visible";
+document.getElementById("leftarrowergosum").style.visibility = "hidden"; 
+document.getElementById("rightarrowergosum").style.visibility = "hidden"; 
+document.getElementById("leftarrowtempsperdu").style.visibility = "visible"; 
+document.getElementById("rightarrowtempsperdu").style.visibility = "visible"; 
 document.getElementById("tempsperduthumb").className ='rightchangein';
 document.getElementById("tempsperduvimeo").className ='rightchangein';
 document.getElementById("titletempsperdu").className ='titlegoingrightin'; }, 900);
 }
+
+// Left ARROW ERGOSUM  --> Espropriu
 function leftarrowergosum(){
-document.getElementById("maindivvideoergosum").style.visibility = "hidden";
-document.getElementById("maindivsespropriu").style.visibility = "visible";
+document.getElementById("ergosumthumb").className ='leftchangeout';
+document.getElementById("ergosumvimeo").className ='leftchangeout';
+document.getElementById("titleergosum").className ='titlegoingleftout';
+setTimeout(function(){ 
+document.getElementById("maindivvideoergosum").style.visibility = "hidden"; 
+document.getElementById("maindivvideoespropriu").style.visibility = "visible";
+document.getElementById("leftarrowergosum").style.visibility = "hidden"; 
+document.getElementById("rightarrowergosum").style.visibility = "hidden"; 
+document.getElementById("leftarrowespropriu").style.visibility = "visible"; 
+document.getElementById("rightarrowespropriu").style.visibility = "visible"; 
+document.getElementById("espropriuthumb").className ='leftchangein';
+document.getElementById("espropriuvimeo").className ='leftchangein';
+document.getElementById("titleespropriu").className ='titlegoingleftin'; }, 900);
 }
+
+
+
+                            // TEMPSPERDU
 
 function tempsperdugone(){
 
 
 if (nc % 2 == 0) {
 document.getElementById("plustempsperdu").src = "meno.png";
-document.getElementById("leftarrow").className ='classname';
+document.getElementById("leftarrowtempsperdu").className ='leftarrowgone';
 document.getElementById("titletempsperdu").className ='titlegoingup';
-document.getElementById("rightarrow").className ='classnamearrowin';
+document.getElementById("rightarrowtempsperdu").className ='rightarrowgone';
 document.getElementById("tempsperduthumb").className ='classname';
 document.getElementById("tempsperduvimeo").className ='classname';
 
@@ -440,9 +621,9 @@ nc++;
 }
 else {
 document.getElementById("plustempsperdu").src = "plus.png";
-document.getElementById("leftarrow").className ='classname2';
+document.getElementById("leftarrowtempsperdu").className ='leftarrowcome';
 document.getElementById("titletempsperdu").className ='titlegoingdown';
-document.getElementById("rightarrow").className ='classnamearrowout';
+document.getElementById("rightarrowtempsperdu").className ='rightarrowcome';
 document.getElementById("tempsperduthumb").className ='classname2';
 document.getElementById("tempsperduvimeo").className ='classname2';
 
@@ -452,6 +633,8 @@ nc++;
 function thumbnailgonetempsperdu(){
 document.getElementById("tempsperduthumb").style.visibility = "hidden";}
 
+// Left ARROW TEMPSPERDU  --> Ergo Sum
+
 function leftarrowtempsperdu(){
 document.getElementById("tempsperduthumb").className ='leftchangeout';
 document.getElementById("tempsperduvimeo").className ='leftchangeout';
@@ -459,10 +642,232 @@ document.getElementById("titletempsperdu").className ='titlegoingleftout';
 setTimeout(function(){ 
 document.getElementById("maindivvideotempsperdu").style.visibility = "hidden"; 
 document.getElementById("maindivvideoergosum").style.visibility = "visible";
+document.getElementById("leftarrowtempsperdu").style.visibility = "hidden"; 
+document.getElementById("rightarrowtempsperdu").style.visibility = "hidden";
+document.getElementById("leftarrowergosum").style.visibility = "visible"; 
+document.getElementById("rightarrowergosum").style.visibility = "visible";  
 document.getElementById("ergosumthumb").className ='leftchangein';
 document.getElementById("ergosumvimeo").className ='leftchangein';
 document.getElementById("titleergosum").className ='titlegoingleftin'; }, 900);
 }
+
+// RIGH ARROW TEMPSPERDU  --> s8
+function rightarrowtempsperdu(){
+document.getElementById("tempsperduthumb").className ='rightchangeout';
+document.getElementById("tempsperduvimeo").className ='rightchangeout';
+document.getElementById("titletempsperdu").className ='titlegoingrightout';
+setTimeout(function(){ 
+document.getElementById("maindivvideotempsperdu").style.visibility = "hidden"; 
+document.getElementById("maindivvideos8").style.visibility = "visible";
+document.getElementById("leftarrowtempsperdu").style.visibility = "hidden"; 
+document.getElementById("rightarrowtempsperdu").style.visibility = "hidden"; 
+document.getElementById("leftarrows8").style.visibility = "visible"; 
+document.getElementById("rightarrows8").style.visibility = "visible"; 
+document.getElementById("s8thumb").className ='rightchangein';
+document.getElementById("s8vimeo").className ='rightchangein';
+document.getElementById("titles8").className ='titlegoingrightin'; }, 900);
+}
+
+
+
+
+
+
+
+
+
+
+                               // ESPROPRIU
+							   
+function espropriugone(){
+
+
+if (nc % 2 == 0) {
+document.getElementById("plusespropriu").src = "meno.png";
+document.getElementById("leftarrowespropriu").className ='leftarrowgone';
+document.getElementById("titleespropriu").className ='titlegoingup';
+document.getElementById("rightarrowespropriu").className ='rightarrowgone';
+document.getElementById("espropriuthumb").className ='classname';
+document.getElementById("espropriuvimeo").className ='classname';
+
+nc++;
+}
+else {
+document.getElementById("leftarrowespropriu").className ='leftarrowcome';
+document.getElementById("plusespropriu").src = "plus.png";
+document.getElementById("titleespropriu").className ='titlegoingdown';
+document.getElementById("rightarrowespropriu").className ='rightarrowcome';
+document.getElementById("espropriuthumb").className ='classname2';
+document.getElementById("espropriuvimeo").className ='classname2';
+
+nc++;
+}
+}
+function thumbnailgoneespropriu(){
+document.getElementById("espropriuthumb").style.visibility = "hidden";}
+
+
+// RIGH ARROW ESPROPRIU  --> Ergo Sum
+function rightarrowespropriu(){
+document.getElementById("espropriuthumb").className ='rightchangeout';
+document.getElementById("espropriuvimeo").className ='rightchangeout';
+document.getElementById("titleespropriu").className ='titlegoingrightout';
+setTimeout(function(){ 
+document.getElementById("maindivvideoespropriu").style.visibility = "hidden"; 
+document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("rightarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("maindivvideoergosum").style.visibility = "visible";
+document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("rightarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("leftarrowergosum").style.visibility = "visible"; 
+document.getElementById("rightarrowergosum").style.visibility = "visible"; 
+document.getElementById("ergosumthumb").className ='rightchangein';
+document.getElementById("ergosumvimeo").className ='rightchangein';
+document.getElementById("titleergosum").className ='titlegoingrightin'; }, 900);
+}
+
+// Left ARROW ESPROPRIU  --> Stockfootage
+function leftarrowespropriu(){
+document.getElementById("espropriuthumb").className ='leftchangeout';
+document.getElementById("espropriuvimeo").className ='leftchangeout';
+document.getElementById("titleespropriu").className ='titlegoingleftout';
+setTimeout(function(){ 
+document.getElementById("videocontainerstockfootage").className ='rightchangeinstockfootage';
+document.getElementById("maindivvideoespropriu").style.visibility = "hidden"; 
+document.getElementById("maindivvideostockfootage").style.visibility = "visible";
+document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("rightarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("leftarrowstockfootage").style.visibility = "visible"; 
+document.getElementById("rightarrowstockfootage").style.visibility = "visible"; 
+
+document.getElementById("titlestockfootage").className ='titlegoingleftin'; }, 900);
+}
+
+//TEST
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // s8
+				   
+function s8gone(){
+
+
+if (nc % 2 == 0) {
+document.getElementById("pluss8").src = "meno.png";
+document.getElementById("leftarrows8").className ='leftarrowgone';
+document.getElementById("titles8").className ='titlegoingup';
+document.getElementById("rightarrows8").className ='rightarrowgone';
+document.getElementById("s8thumb").className ='classname';
+document.getElementById("s8vimeo").className ='classname';
+
+nc++;
+}
+else {
+document.getElementById("leftarrows8").className ='leftarrowcome';
+document.getElementById("pluss8").src = "plus.png";
+document.getElementById("titles8").className ='titlegoingdown';
+document.getElementById("rightarrows8").className ='rightarrowcome';
+document.getElementById("s8thumb").className ='classname2';
+document.getElementById("s8vimeo").className ='classname2';
+
+nc++;
+}
+}
+
+                      
+					  
+function thumbnailgones8(){
+document.getElementById("s8thumb").style.visibility = "hidden";}
+
+
+// RIGH ARROW s8  --> stockfootage
+
+function rightarrows8(){
+document.getElementById("s8thumb").className ='rightchangeout';
+document.getElementById("s8vimeo").className ='rightchangeout';
+document.getElementById("titles8").className ='titlegoingrightout';
+setTimeout(function(){ 
+document.getElementById("maindivvideos8").style.visibility = "hidden"; 
+document.getElementById("maindivvideostockfootage").style.visibility = "visible";
+document.getElementById("leftarrows8").style.visibility = "hidden"; 
+document.getElementById("rightarrows8").style.visibility = "hidden"; 
+document.getElementById("leftarrowstockfootage").style.visibility = "visible"; 
+document.getElementById("rightarrowstockfootage").style.visibility = "visible"; 
+document.getElementById("videocontainerstockfootage").className ='rightchangeinstockfootage';
+document.getElementById("titlestockfootage").className ='titlegoingrightin'; }, 900);
+}
+
+// Left ARROW s8  --> tempsperdu
+
+function leftarrows8(){
+document.getElementById("s8thumb").className ='leftchangeout';
+document.getElementById("s8vimeo").className ='leftchangeout';
+document.getElementById("titles8").className ='titlegoingleftout';
+setTimeout(function(){ 
+document.getElementById("maindivvideos8").style.visibility = "hidden"; 
+document.getElementById("maindivvideotempsperdu").style.visibility = "visible";
+document.getElementById("leftarrows8").style.visibility = "hidden"; 
+document.getElementById("rightarrows8").style.visibility = "hidden"; 
+document.getElementById("leftarrowtempsperdu").style.visibility = "visible"; 
+document.getElementById("rightarrowtempsperdu").style.visibility = "visible"; 
+document.getElementById("tempsperduthumb").className ='leftchangein';
+document.getElementById("tempsperduvimeo").className ='leftchangein';
+document.getElementById("titletempsperdu").className ='titlegoingleftin'; }, 900);
+}
+
+                   // Stockfootage
+				   
+				   
+// RIGH ARROW stockfootage  --> espropriu
+function rightarrowstockfootage(){
+document.getElementById("videocontainerstockfootage").className ='rightchangeoutstockfootage';
+document.getElementById("titlestockfootage").className ='titlegoingrightout';
+setTimeout(function(){ 
+document.getElementById("maindivvideostockfootage").style.visibility = "hidden"; 
+document.getElementById("maindivvideoespropriu").style.visibility = "visible";
+document.getElementById("leftarrowstockfootage").style.visibility = "hidden"; 
+document.getElementById("rightarrowstockfootage").style.visibility = "hidden"; 
+document.getElementById("leftarrowespropriu").style.visibility = "visible"; 
+document.getElementById("rightarrowespropriu").style.visibility = "visible"; 
+document.getElementById("espropriuthumb").className ='rightchangein';
+document.getElementById("espropriuvimeo").className ='rightchangein';
+document.getElementById("titleespropriu").className ='titlegoingrightin'; }, 900);
+}
+
+// Left ARROW stockfootage  --> s8
+function leftarrowstockfootage(){
+document.getElementById("videocontainerstockfootage").className ='leftchangeoutstockfootage';
+document.getElementById("titlestockfootage").className ='titlegoingleftout';
+setTimeout(function(){ 
+document.getElementById("maindivvideostockfootage").style.visibility = "hidden"; 
+document.getElementById("maindivvideos8").style.visibility = "visible";
+document.getElementById("leftarrowstockfootage").style.visibility = "hidden"; 
+document.getElementById("rightarrowstockfootage").style.visibility = "hidden"; 
+document.getElementById("leftarrows8").style.visibility = "visible"; 
+document.getElementById("rightarrows8").style.visibility = "visible"; 
+document.getElementById("s8thumb").className ='leftchangein';
+document.getElementById("s8vimeo").className ='leftchangein';
+document.getElementById("titles8").className ='titlegoingleftin'; }, 900);
+}
+
+
+
+
+
+
+
 
 </script>
 <style type="text/css">
@@ -487,7 +892,7 @@ visibility: visible;
   opacity: 1;
 overflow: hidden;
 color:white;
-width:350px;
+width:500px;
 height:50px;
 animation: rightin 0.9s linear;
 animation-fill-mode: forwards;
@@ -496,7 +901,7 @@ animation-timing-function: ease-in-out;
 
 @keyframes rightin {
   0%   { left:0%; top:88%;}
-  100%  {left:30%; top:88%;}
+  100%  {left:22%; top:88%;}
   0% { clip-path: inset(0 100% 0 0); }
   100% { clip-path: inset(0); } 
   
@@ -570,7 +975,7 @@ visibility: visible;
   opacity: 1;
 overflow: hidden;
 color:white;
-width:350px;
+width:500px;
 height:50px;
 animation: leftin 0.9s linear;
 animation-fill-mode: forwards;
@@ -579,7 +984,7 @@ animation-timing-function: ease-in-out;
 
 @keyframes leftin {
   0%   { right:0%; top:88%;}
-  100%  {right:30%; top:88%;}
+  100%  {right:22%; top:88%;}
   0% { clip-path: inset(0 0 0 100%); }
   100% { clip-path: inset(0); } 
   
@@ -724,7 +1129,7 @@ position:absolute;
   100% { clip-path: inset(0); }
 }
   
-      .classnamearrowin {
+      .rightarrowgone {
 position:absolute;
 top:50%;
 right:9%;
@@ -732,10 +1137,26 @@ visibility: hidden;
   opacity: 0;
   transition: visibility 0s 2s, opacity 1s linear;}
   
-    .classnamearrowout {
+    .rightarrowcome {
 position:absolute;
 top:50%;
 right:9%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;}
+  
+      .leftarrowgone {
+position:absolute;
+top:50%;
+left:9%;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 1s linear;}
+  
+        .leftarrowcome{
+position:absolute;
+top:50%;
+left:9%;
   visibility: visible;
   opacity: 1;
   transition: opacity 1s linear;}
@@ -743,11 +1164,93 @@ right:9%;
 </style>
 
 
+<style>
+// STOCKFOOTAGE STYLE ANIMATION
+
+.rightchangeinstockfootage {
+padding-left:5px;
+padding-top:5px;
+padding-bottom:5px;
+padding-right:5px;
+background-color:black;
+border-radius: 25px;
+position:absolute;
+text-align:center;
+overflow-y:scroll;
+align-items: center;
+  justify-content: center;
+
+width:640px; 
+height:360px;
+left:120px;
+top:100px;
+visibility: visible;
+  opacity: 1;
+  transition: visibility 1s 0s, opacity 0s ease-in-out;
+animation: 1s rightchangeanimationinstockfootage;
+}
+
+@keyframes rightchangeanimationinstockfootage {
+  0%   { left:-30%; top:0%;}
+  100%  {left:0%; top:0%;}
+  
+}
+
+.rightchangeoutstockfootage {
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+animation: 1s rightchangeanimationstockfootage;
+}
 
 
+@keyframes rightchangeanimationinstockfootage {
+  0%   { left:-30%; top:0%;}
+  100%  {left:0%; top:0%;}
+  
+}
 
 
+.leftchangeinstockfootage {
+visibility: visible;
+  opacity: 1;
+  transition: visibility 1s 0s, opacity 0s ease-in-out;
+animation: 1s leftchangeanimationinstockfootage;
+}
+@keyframes leftchangeanimationinstockfootage {
+  0%   { right:-30%; top:0%;}
+  100%  {right:0%; top:0%;}
+  
+}
 
+.leftchangeoutstockfootage {
+padding-left:5px;
+padding-top:5px;
+padding-bottom:5px;
+padding-right:5px;
+background-color:black;
+border-radius: 25px;
+position:absolute;
+text-align:center;
+overflow-y:scroll;
+align-items: center;
+  justify-content: center;
+
+width:640px; 
+height:360px;
+left:120px;
+top:100px;
+visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s ease-in-out;
+animation: 1s leftchangeanimationstockfootage;
+}
+
+@keyframes leftchangeanimationinstockfootage {
+  0%   { right:-30%; top:0%;}
+  100%  {right:0%; top:0%;}
+  
+}
 </body>
 
 </html>
