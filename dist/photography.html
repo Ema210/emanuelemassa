@@ -8,10 +8,9 @@
 
 <script>//paste this code under the head tag or in a separate js file.
 	// Wait for window load
-	$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
-	});</script>
+	$(window).on("load",function(){
+     $(".se-pre-con").fadeOut("slow");
+});</script>
 <style> 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -87,7 +86,7 @@ body, html {
 
 
   /* Full height */
-  height: 100%; 
+  min-height: 100%; 
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -273,10 +272,9 @@ height:20px;
 				}
 			}
 		</style>
+<div class="bg">
+</div>
 
-<video autoplay muted loop id="myVideo">
-  <source src="backdune.mp4" type="video/mp4">
-</video>
 		<div class="m-p-g" >
 			<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 				<img src="photographyimages/Small/1.jpg" data-full="photographyimages/1.jpg" class="m-p-g__thumbs-img" />
@@ -303,6 +301,5 @@ height:20px;
 			});
 		</script>
 	</body>
-</body>
 
 </html>
