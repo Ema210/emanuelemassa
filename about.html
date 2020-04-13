@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Emanuele Massa - Portfolio </title>
+<link rel="icon" href="tab.png" type="image/png" sizes="5x5">
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800&display=swap" rel="stylesheet">
+<style> backgroundphotographyimage.jpg
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    opacity: 0; 
+	background-color:black;
+    transition: opacity 0.5s; 
+	scrollbar-width: none;
+} 
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+#nameimgtext{
+  position: relative;
+  transform: translate(-50%, -50%);
+    z-index:1;
+	  filter: invert(100%);
+	height:60px;cursor:pointer;
+}
+
+body, html {
+
+  height: 100%;
+  margin: 0;
+      background-color:black;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("backgroundaboutimage.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,&display=swap');
+.snip1135 {
+  font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index:2;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+.snip1135 * {
+  box-sizing: border-box;
+}
+.snip1135 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 0.5em;
+    border-bottom: 1px solid white;
+	padding-bottom: 4px;
+}
+.snip1135 a {
+  padding: 0.5em 0;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.snip1135 a:before,
+.snip1135 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1135 a:before {
+  bottom: 0;
+  display: block;
+  height: 4px;
+  width: 0%;
+  content: "";
+  background-color: white;
+}
+.snip1135 a:after {
+  left: 0;
+  top: 0;
+  padding: 0.54em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.snip1135 a:hover:before,
+.snip1135 .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.snip1135 a:hover:after,
+.snip1135 .current a:after {
+  max-width: 100%;
+}
+#logoandmenu{position:absolute;top:10%; left:50%; 
+}
+#social{
+position: absolute;
+width:auto;
+height:30px;
+top:95%;
+z-index:2;
+left:50%;
+filter: invert(100%);
+text-align:center;  align-items: center;
+  justify-content: center;transform: translate(-50%, -50%);
+  filter: drop-shadow(0 1px 1px black) 
+          drop-shadow(1px 1px 0 black);
+}
+
+#socialimage{
+height:20px;
+  position: relative;
+
+
+}
+
+#profilepic{
+
+height:220px;
+widht:100%;
+position: relative;
+ z-index:2;
+ float:right; margin-left:50px;
+}
+#cvlogo{
+cursor:pointer;
+height:50px;
+widht:100%;
+
+position: relative;
+ z-index:2;
+ float:right; margin-left:100px;padding-bottom:10%;
+}
+
+#arrowblack{
+cursor:pointer;
+height:40px;
+widht:100%;
+bottom:10%;
+right:48.5%;
+position: fixed;
+ z-index:2;
+}
+
+#maindivabout {
+ scroll-behavior: smooth;
+overflow: hidden; 
+overflow:auto; 
+float:left;
+height:65%;
+ width:75%;
+ position:fixed;
+ top:25%;
+ z-index:1;
+ scrollbar-width: none;
+}
+#ptext{
+top:8%;
+font-size:90%;
+margin:auto;
+left:15%;
+line-height: 20pt;
+color:black;
+padding:2%;
+width:50%;
+position:relative;
+opacity:1;
+ z-index:2;
+font-family: raleway;
+
+
+}
+#backgroundaboutme{
+background-color:white;
+opacity:0.7;
+ overflow: hidden; 
+overflow:auto; 
+height:65%;
+ width:55%;
+ left:23%;
+ position:fixed;
+ top:25%;
+ z-index:1;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+	
+}
+
+#myVideo {
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#myVideo {
+  pointer-events: none;
+}
+</style>
+</head>
+<body onload="document.body.style.opacity='1'"> 
+
+
+
+
+
+<div id="logoandmenu">
+
+<img id="nameimgtext" onclick="location.href='home.html';" src="textname.png">
+<ul class="snip1135">
+  <li><a href="#" onclick="location.href='video.html';" data-hover="Video">VIDEO</a></li>
+  <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
+  <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
+</ul>
+</div>
+
+<div id="maindivabout">
+
+
+<div id="ptext"><img id="profilepic" src="profilepic.png"/>
+<h1 style="color:#16475a; font-size:23px; font-weight: bold;">ABOUT ME</h1><br>
+<h1 style="  font-size:17px; font-weight: bold;" > Filmmaker / Creative Digital Media Graduate </h1>
+<br>
+<p>
+​
+
+A passionate Italian Creative Digital Media graduate and filmmaker from Cork Institute of Technology. <br>
+Proven creative ability and teamwork skills from past media-related work experience with a focus on video production, photography, sound design, animations, colourist and visual effects. <br>
+Currently seeking an opportunity to work in the film industry to further expand my career in the area.
+
+<br><br></p> <br>
+<h1 id ="section2"style="  font-size:17px; font-weight: bold;" > CONTACTS </h1>
+<p><img id="cvlogo" onclick="window.open('cvtestwebsite.pdf'); return true; "src="cvlogo.png"/>
+Email | massaemanuele@hotmail.com<br>
+Phone Number | +39 3406229442 - +353 0838841731
+</p>
+<a href="#section2" > <img onclick="arrowgone()"id="arrowblack" src="arrowblack.png"/></a>
+<script> function arrowgone(){document.getElementById("arrowblack").src = "lineblack.png";}
+</script>
+</div>
+<div id="backgroundaboutme">
+
+
+</div>
+
+
+</div>
+
+
+<div id="social">
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='http://instagram.com/_ema210'"src="instagram.png"/>
+<img id="socialimage"style="cursor:pointer;"onclick="window.location.href='http://vimeo.com/emanuelemassa'" src="vimeo.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
+<img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
+</div>
+<video autoplay muted loop id="myVideo">
+  <source src="test2.mp4" type="video/mp4">
+</video>
+</body>
+
+</html>
