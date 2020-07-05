@@ -477,7 +477,7 @@ espropriuespropriu.</p><br>
 <div id="titles8" class="textdivppp">
 <p style="font-size:18px; font-weight:bold;"> Gilbert's Dead - Music video(2019)</p>
 <br>
-<p style="font-size:13px; font-weight:medium;">Cinematographer and scriptwriter</p><br><br>
+<p style="font-size:13px; font-weight:medium;">Cinematographer</p><br><br>
 <h1 class="paragraphvideo" >
 s8s8.</p><br>
 <span style=" font-weight:bold;">Film Type:</span> Experimental, Short <br>
@@ -500,38 +500,6 @@ s8s8.</p><br>
 </div>
 
 
-
-     <!-- Stockfootage-->
-
-
-<div id="maindivvideostockfootage" style="visibility: hidden;"  >
-<img onclick="leftarrowstockfootage()" class="leftarrow "id="leftarrowstockfootage" src="leftblack.png"/>
-<img onclick="rightarrowstockfootage()" class="rightarrow "id="rightarrowstockfootage" src="rightblack.png"/>
-
-<div id="videocontainerstockfootage" class="videocontainerstockfootage">
-
-<video width="auto" height="158"  autoplay loop muted playsinline> <source    id="stockfootagevimeo"  src="1.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="2.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="3.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="4.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="5.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="6.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="7.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="8.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="9.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="11.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="12.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-<video width="auto" height="158" autoplay loop muted playsinline ><source    id="stockfootagevimeo"  src="13.mp4" style="position:relative;"  frameborder="0" type="video/mp4"></video>
-</div>
-
-
-<div id="titlestockfootage" class="textdivppp">
-<p style="font-size:18px; font-weight:bold;"> STOCK FOOTAGE</p>
-<br>
-<p style="font-size:13px; font-weight:medium;"></p><br><br>
-
-</div>
-</div>
 <script>
 var nc =0;
 
@@ -732,15 +700,17 @@ document.getElementById("espropriuthumb").className ='leftchangeout';
 document.getElementById("espropriuvimeo").className ='leftchangeout';
 document.getElementById("titleespropriu").className ='titlegoingleftout';
 setTimeout(function(){ 
-document.getElementById("videocontainerstockfootage").className ='rightchangeinstockfootage';
 document.getElementById("maindivvideoespropriu").style.visibility = "hidden"; 
-document.getElementById("maindivvideostockfootage").style.visibility = "visible";
-document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
 document.getElementById("rightarrowespropriu").style.visibility = "hidden"; 
-document.getElementById("leftarrowstockfootage").style.visibility = "visible"; 
-document.getElementById("rightarrowstockfootage").style.visibility = "visible"; 
-
-document.getElementById("titlestockfootage").className ='titlegoingleftin'; }, 900);
+document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("maindivvideos8").style.visibility = "visible";
+document.getElementById("rightarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("leftarrowespropriu").style.visibility = "hidden"; 
+document.getElementById("rightarrows8").style.visibility = "visible"; 
+document.getElementById("leftarrows8").style.visibility = "visible"; 
+document.getElementById("s8thumb").className ='leftchangein';
+document.getElementById("s8vimeo").className ='leftchangein';
+document.getElementById("titles8").className ='titlegoingleftin'; }, 900);
 }
 
 //TEST
@@ -800,13 +770,14 @@ document.getElementById("s8vimeo").className ='rightchangeout';
 document.getElementById("titles8").className ='titlegoingrightout';
 setTimeout(function(){ 
 document.getElementById("maindivvideos8").style.visibility = "hidden"; 
-document.getElementById("maindivvideostockfootage").style.visibility = "visible";
-document.getElementById("leftarrows8").style.visibility = "hidden"; 
+document.getElementById("maindivvideoespropriu").style.visibility = "visible";
 document.getElementById("rightarrows8").style.visibility = "hidden"; 
-document.getElementById("leftarrowstockfootage").style.visibility = "visible"; 
-document.getElementById("rightarrowstockfootage").style.visibility = "visible"; 
-document.getElementById("videocontainerstockfootage").className ='rightchangeinstockfootage';
-document.getElementById("titlestockfootage").className ='titlegoingrightin'; }, 900);
+document.getElementById("leftarrows8").style.visibility = "hidden"; 
+document.getElementById("rightarrowespropriu").style.visibility = "visible"; 
+document.getElementById("rightarrowespropriu").style.visibility = "visible"; 
+document.getElementById("espropriuthumb").className ='rightchangein';
+document.getElementById("espropriuvimeo").className ='rightchangein';
+document.getElementById("titleespropriu").className ='titlegoingrightin'; }, 900);
 }
 
 // Left ARROW s8  --> tempsperdu
@@ -826,46 +797,6 @@ document.getElementById("tempsperduthumb").className ='leftchangein';
 document.getElementById("tempsperduvimeo").className ='leftchangein';
 document.getElementById("titletempsperdu").className ='titlegoingleftin'; }, 900);
 }
-
-                   // Stockfootage
-				   
-				   
-// RIGH ARROW stockfootage  --> espropriu
-function rightarrowstockfootage(){
-document.getElementById("videocontainerstockfootage").className ='rightchangeoutstockfootage';
-document.getElementById("titlestockfootage").className ='titlegoingrightout';
-setTimeout(function(){ 
-document.getElementById("maindivvideostockfootage").style.visibility = "hidden"; 
-document.getElementById("maindivvideoespropriu").style.visibility = "visible";
-document.getElementById("leftarrowstockfootage").style.visibility = "hidden"; 
-document.getElementById("rightarrowstockfootage").style.visibility = "hidden"; 
-document.getElementById("leftarrowespropriu").style.visibility = "visible"; 
-document.getElementById("rightarrowespropriu").style.visibility = "visible"; 
-document.getElementById("espropriuthumb").className ='rightchangein';
-document.getElementById("espropriuvimeo").className ='rightchangein';
-document.getElementById("titleespropriu").className ='titlegoingrightin'; }, 900);
-}
-
-// Left ARROW stockfootage  --> s8
-function leftarrowstockfootage(){
-document.getElementById("videocontainerstockfootage").className ='leftchangeoutstockfootage';
-document.getElementById("titlestockfootage").className ='titlegoingleftout';
-setTimeout(function(){ 
-document.getElementById("maindivvideostockfootage").style.visibility = "hidden"; 
-document.getElementById("maindivvideos8").style.visibility = "visible";
-document.getElementById("leftarrowstockfootage").style.visibility = "hidden"; 
-document.getElementById("rightarrowstockfootage").style.visibility = "hidden"; 
-document.getElementById("leftarrows8").style.visibility = "visible"; 
-document.getElementById("rightarrows8").style.visibility = "visible"; 
-document.getElementById("s8thumb").className ='leftchangein';
-document.getElementById("s8vimeo").className ='leftchangein';
-document.getElementById("titles8").className ='titlegoingleftin'; }, 900);
-}
-
-
-
-
-
 
 
 
