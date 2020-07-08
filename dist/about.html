@@ -271,10 +271,19 @@ border-radius:15px;
 #myVideo {
   pointer-events: none;
 }
+
+.bg {
+
+  background-image: url("photographyimages/1.jpg");
+  min-height: 100%; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
 </head>
 <body onload="document.body.style.opacity='1'"> 
-
+<div class="bg">
+</div>
 
 
 
@@ -326,9 +335,7 @@ Phone Number | +39 3406229442 - +353 0838841731
 <img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.linkedin.com/in/emanuele-massa-07356214a/'"src="linkedin.png"/>
 <img id="socialimage" style="cursor:pointer;"onclick="window.location.href='https://www.youtube.com/channel/UCKd9DdL8pNIXxe7LVQSg8CA?view_as=subscriber'"src="youtube.png"/>
 </div>
-<video autoplay muted loop id="myVideo">
-  <source src="backgroundvideoaboutink.mp4" type="video/mp4">
-</video>
+
 </body>
 
 </html>
