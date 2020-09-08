@@ -1,0 +1,697 @@
+
+<!DOCTYPE HTML >
+<html>
+   <head>
+      <title>Abyss Film</title>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+ <script src="GazeCloudAPI.js" ></script>
+
+      <script type = "text/javascript" >
+var info;
+var counter = 0;
+         function PlotGaze(GazeData) {
+
+/*
+	GazeData.state // 0: valid gaze data; -1 : face tracking lost, 1 : gaze uncalibrated
+	GazeData.docX // gaze x in document coordinates
+	GazeData.docY // gaze y in document cordinates
+	GazeData.time // timestamp
+*/
+
+
+             document.getElementById("GazeData").innerHTML = "GazeX: " + GazeData.GazeX + " GazeY: " + GazeData.GazeY;
+             document.getElementById("HeadPhoseData").innerHTML = " HeadX: " + GazeData.HeadX + " HeadY: " + GazeData.HeadY + " HeadZ: " + GazeData.HeadZ;
+             document.getElementById("HeadRotData").innerHTML = " Yaw: " + GazeData.HeadYaw + " Pitch: " + GazeData.HeadPitch + " Roll: " + GazeData.HeadRoll;
+
+        info = GazeData.GazeX;
+         var x = GazeData.docX;
+         var y = GazeData.docY;
+
+         var gaze = document.getElementById("gaze");
+         x -= gaze .clientWidth/2;
+         y -= gaze .clientHeight/2;
+
+
+
+	gaze.style.left = x + "px";
+	gaze.style.top = y + "px";
+
+
+  if(GazeData.state != 0)
+  {
+   if( gaze.style.display  == 'block')
+   gaze  .style.display = 'none';
+  }
+  else
+  {
+   if( gaze.style.display  == 'none')
+   gaze  .style.display = 'block';
+  }
+
+    }
+
+         //////set callbacks/////////
+
+         GazeCloudAPI.OnCalibrationComplete =function(){ console.log('gaze Calibration Complete'); document.getElementById('bgvid1').src = "video/background2.mp4";
+            document.getElementById('calibrationvid').style.display = "none";
+            document.getElementById('fullscreenbutton').style.display = "block";
+            document.getElementById('enterbutton').style.display = "none";
+            }
+         GazeCloudAPI.OnCamDenied =  function(){ console.log('camera  access denied')  }
+         GazeCloudAPI.OnError =  function(msg){ console.log('err: ' + msg)  }
+         GazeCloudAPI.UseClickRecalibration = true;
+      	 GazeCloudAPI.OnResult = PlotGaze;
+
+
+      </script>
+
+      <style>
+        * {
+          font-family: 'Raleway', sans-serif;
+          box-sizing: border-box;
+          text-rendering: optimizeLegibility;
+      }
+      html {
+          scroll-snap-type: mandatory;
+          scroll-snap-points-y: repeat(100vh);
+          scroll-snap-type: y proximity;
+          z-index: -2;
+
+  }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+      
+      body{
+
+        background: transparent;
+      }
+      #wrapper {
+        color: white;
+      }
+      section {
+
+          height: 100vh;
+          scroll-snap-align: start;
+          text-align: center;
+          position: relative;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          padding-left: 100px;
+          padding-right: 100px;
+          overflow: hidden;
+      }
+      #firstsection{
+        z-index: 0;
+      }
+      #thirdsection {
+          flex-direction: row;
+          align-items: center;
+      }
+      #thirdsection div {
+        max-width: 25%;
+        margin:20px;
+        z-index: 0;
+      }
+      #section2 *{
+        z-index: 0;
+      }
+      .avatar {
+        height: 100px;
+        width:100px;
+        border-radius: 50px;
+      }
+      h2{
+        color:white;
+      }
+
+            #title {
+              position:relative;
+              top: -40px;
+              left:35px;
+              margin-left: auto;
+              margin-right: auto;
+              color: white;
+              font-size: 3em;
+
+              letter-spacing: 1.5em;
+            }
+            #enterbutton {
+              position:relative;
+              top: -40px;
+              background: rgba(1, 1, 1, .4);
+              color:white;
+              border: 1px solid white;
+              border-radius:10px;
+              width:80px;
+              height: 20px;
+              margin-top: 10px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            #fullscreenbutton {
+              display:none;
+              position:relative;
+              top: -40px;
+              background: rgba(1, 1, 1, .4);
+              color:white;
+              border: 1px solid white;
+              border-radius:10px;
+              width:80px;
+              height: 20px;
+              margin-top: 10px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .backgroundvid {
+              position: fixed;
+              right: 0;
+              bottom: 0;
+              min-width: 100%;
+              min-height: 100%;
+              z-index: -2;
+            }
+            #calibrationvid{
+              z-index: 0;
+            }
+            #precalimg{
+              position: fixed;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              min-height: 100%;
+            }
+            .sectionbg{
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              height: 100%;
+              min-width: 100%;
+              z-index: 0;
+            }
+            #showinit{
+              z-index: 99999;
+            }
+            #changeview{
+              color:white;
+              background-color:transparent;
+              padding: 5px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              margin:auto;
+              font-size: 16px;
+              border: 2px solid white;
+              border-radius: 8px;
+              z-index:9999999;
+            }
+            .buttonCal, .buttonRecalibrate {
+            	color:white;
+              background-color:transparent;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              display: block;
+              margin:auto;
+              font-size: 16px;
+              border: 2px solid white;
+              border-radius: 8px;
+            }
+            .buttonCal:disabled {
+              opacity: 0.2;
+              background-color:  red;
+            }
+
+            #hide {
+              display: none;
+            }
+            ul {
+              list-style-type: none;
+            }
+
+            .fadeout {
+              animation: fade ease 10s;
+            	animation-iteration-count: 1;
+            }
+            @keyframes fade {
+              0% {
+                opacity:1;
+              }
+              80% {
+                opacity:1;
+              }
+            	100% {
+                opacity:0;
+              }
+            }
+            .scrollup{
+              width: 50px;
+              position: absolute;
+              top:0px;
+              left:calc(50% - 25px);
+            }
+            .scrolldown{
+              width:50px;
+              position: absolute;
+              bottom:0px;
+              left:calc(50% - 25px);
+            }
+
+
+
+            .vidBarvidBar {
+              opacity: 0;
+			  
+              transition: 0.6s;
+            }
+            .vidBar:hover {opacity: 1}
+            .vidFrame {  margin-top:-1%;  }
+            .vidBar { border-top: 3px solid white; position: fixed; bottom: 0; right: 0; left: 0; height: 40px; width: 100%; z-index:3; }
+
+            #fullScreen { position: absolute; bottom: 0; right: 0; width: 36px; height: 36px; outline: none; border: 1px solid transparent; border-radius: 6px; display: block; cursor: pointer; }
+
+            #fullScreen:hover { border: 1px groove #0ef; }
+            .on, .off { background: url('assets/fullscreen.png') no-repeat; width: 26px; height: 26px; }
+            .off { background-position: 0 0 }
+            .on { background-position: 5px -40px }
+
+            #playPause { position: absolute; bottom: 0; left: 0; width: 36px; height: 36px; background: none; font-size: 26px; color: #ffffff; line-height: 1; border: 1px solid transparent; display: block; cursor: pointer; outline: none; }
+            #playPause.play:before { content: '\25b6'; }
+            #playPause.pause:before { content: '\275a\275a'; }
+
+            .vidBar:-moz-full-screen { position: fixed; }
+            .vidBar:-webkit-full-screen { position: fixed; }
+            .vidBar:-ms-fullscreen { position: fixed; }
+            .vidBar:fullscreen { position: fixed; }
+
+            video::-webkit-media-controls-enclosure { display:none !important; }
+            .vidBar { z-index: 2; visibility:hidden;}
+
+      </style>
+   </head>
+
+
+
+
+
+   <body >
+     <video autoplay muted loop class="backgroundvid" preload="auto" id="bgvid1" >
+       <source src="video/background1.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+     </video>
+
+
+
+   <div id='wrapper'>
+   <section id="firstsection">
+     <p style="font-style: italic;">A new way of experiencing film</p>
+     <h1 id='title'>ABYSS</h1>
+     <button  type="button" onclick="enter();" id='enterbutton'>Calibrate</button>
+     <button  type="button" onclick="start();" id='fullscreenbutton'>Enter</button>
+     <img src="assets/arrowdown.png" class="scrolldown">
+   </section>
+   <section id="section2">
+     <img src="assets/bg2.jpeg" class="sectionbg"></img>
+     <img src="assets/arrowup.png" class="scrollup">
+     <h2>Summary</h2>
+     <p>Abyss is an eye-tracking interactive short film, where choices are subconsciously made by what you hold your gaze on. Contrary to active interactive films that disrupt visual continuity by adding invasive gaming world devices, Abyss is capable of maintaining an immersive visual experience. Through eye-tracking technology the user will be capable of making seamless choices throughout the film.
+      </p>
+     <h2>Technical</h2>
+     <p>Abyss utilizes JavaScript programming to track the user’s gaze through the use of webcam and monitor. The webcam tracks the viewer’s gaze and calculates the user’s decisions, by taking an average viewpoint of the X coordinates. The screen is divided into two invisible grids, which has been developed within the code to identify and trace the movement of the user’s gaze within the frame of the film. </p>
+     <h2>User Experience</h2>
+     <p>Abyss meets the balance between active and passive immersive film. Abyss utilizes the user’s gaze in the choice-making process instead of button inputs which require physical interaction. Each choice is made aware to the user by subtle use of audio and visual associative cues throughout the film. This gives the user the ability to immersive themselves within interactive film without disengaging from the viewing experience.
+ </p>
+     <img src="assets/arrowdown.png" class="scrolldown">
+   </section>
+   <section id='thirdsection'>
+     <img src="assets/bg1.jpeg" class="sectionbg"></img>
+     <img src="assets/arrowup.png" class="scrollup">
+     <div>
+       <img class='avatar' src="assets/todavatar.jpg">
+       <h2>Thomas O'Driscoll</h2>
+       <p>Web Developer</p>
+                                  <p>Thomas's role within the project revolved heavily around the implementation of the choice system, eye-tracking software and webpage.  </p>
+       <p>thomas.odriscoll1@mycit.com</p>
+     </div>
+
+     <div>
+       <img class='avatar' src="assets/lauraavatar.jpg">
+       <h2>Laura Keeley</h2>
+       <p>Narrative Designer</p>  <p>Laura’s role within the project centered around the development of the story structure and narrative, video production and sound design. </p>
+       <p>laura.keeley@mycit.ie</p>
+     </div>
+     <div>
+       <img class='avatar' src="assets/emaavatar.png">
+       <h2>Emanuele Massa</h2>
+       <p>Visual Designer</p>     <p>Emanuele’s role within the project was in video production, cinematography, UX design, colour grading and the overall aesthetic of the project. </p>
+       <p>emanuele.massa@mycit.ie</p>
+     </div>
+   </section>
+   </div>
+
+
+
+   <div id='hide'>
+
+   <div>
+      <p >
+         Real-Time Result:
+      <p id = "GazeData" > </p>
+      <p id = "HeadPhoseData" > </p>
+      <p id = "HeadRotData" > </p>
+   </div>
+   </div>
+    <div id ="gaze" style ='position: absolute; display:none; opacity:50%; width: 50px; height: 50px; background-image: url("assets/cross.png"); background-position: center; background-repeat: no-repeat; background-size: cover;	pointer-events: none;	z-index: 999999'></div>
+
+   <video autoplay muted loop class="backgroundvid" id="calibrationvid" preload="auto">
+     <source src="video/backgroundcal.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+   </video>
+   <img src="assets/backim.png" id="precalimg">
+    </img>
+    <figure class="vidFrame">
+        <figcaption class="vidBar" id="vidBar">
+        <button id='playPause' class="play" title="Play/Pause Video"></button>
+        <button id='fullScreen' class="on" title="Enter/Exit Full Screen"></button>
+      </figcaption>
+   <video id="player" width="100%" height="100%"  controls preload="auto">
+     <source src="video/avitoh264abyss.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+   </video>
+   </figure>
+
+
+
+
+      <script>
+      var vid = document.getElementById('player');
+      vid.crossOrigin = "anonymous";
+
+      document.getElementById('vidBar').style.visability = "hidden";
+      var fullBtn = document.getElementById('fullScreen');
+      var playBtn = document.getElementById('playPause');
+      playBtn.addEventListener('click', function(event) {
+        if(vid.paused) {
+          playBtn.classList.remove('play');
+          playBtn.classList.add('pause');
+          vid.play();
+        } else {
+          playBtn.classList.add('play');
+          playBtn.classList.remove('pause');
+          vid.pause();
+        }
+      }, false);
+
+      var tgtEle = document.querySelector('.vidFrame');
+      var  onOrOff = fullBtn.classList.contains('on');
+      fullBtn.addEventListener('click', function(event) {
+        if (onOrOff) {
+          enterFS(tgtEle);
+          fullBtn.classList.remove('on');
+          fullBtn.classList.add('off');
+        } else {
+          exitFS();
+          fullBtn.classList.add('on');
+          fullBtn.classList.remove('off');
+        }
+      }, false);
+      function enterFS(element) {
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        }
+      }
+      function exitFS() {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+
+      vid.style.display = "none";
+      document.getElementById('calibrationvid').style.display = "none";
+      document.getElementById('precalimg').style.display = "none";
+
+      function enter(){
+	  
+        GazeCloudAPI.StartEyeTracking();
+		
+        document.getElementById('precalimg').style.display = 'block';
+        document.getElementById('showvideoid').style.display = 'none';
+        document.getElementById('facemaskimgno').style.display = 'block';
+
+      }
+      function calstart(){
+        document.getElementById('calibrationvid').style.display = 'block';
+        document.getElementById('precalimg').style.display = "none";
+        document.getElementById('showvideoid').style.display = 'block';
+        document.getElementById('facemaskimgok').style.visibility = 'hidden';
+        document.getElementById('facemaskimgno').style.visibility = 'hidden';
+        document.getElementById('showvideoid').style.top = '0px';
+        document.getElementById('camid').style.top = '0px';
+
+      }
+      function changeview(){
+        document.getElementById('showvideoid').style.display = 'block';
+        document.getElementById('facemaskimgok').style.display = 'none';
+        document.getElementById('facemaskimgno').style.display = 'none';
+        document.getElementById('changeview').style.display = 'none';
+      }
+      function start() {
+        vid.style.display= "block";
+        document.getElementById('calibrationvid').style.display = "none";
+        document.getElementById('vidBar').style.visability = "visible";
+        vid.controls = false;
+        document.body.onkeyup = function(e){
+            if(e.keyCode == 32){
+                if(vid.paused === true){
+                  vid.play();
+                }
+                else {
+                  vid.pause();
+                }
+            }
+            if(e.keyCode == 83){
+                vid.pause();
+                vid.currentTime = 0;
+
+            }
+        }
+
+
+
+
+        var b = setInterval(()=>{
+          if(vid.readyState >= 3){
+
+              vid.play();
+              choicestimer();
+              tgtEle.requestFullscreen();
+              vid.controls = false;
+
+              clearInterval(b);
+          }
+      },100);
+}
+var panvalue = 0.00;
+var source;
+var panNode;
+var audioCtx;
+function choicestimer(){
+
+  if(!audioCtx) {
+  audioCtx = new window.AudioContext();
+  }
+  var source = audioCtx.createMediaElementSource(vid);
+  var panNode = audioCtx.createStereoPanner();
+  panNode.pan.value = panvalue;
+  source.connect(panNode);
+  panNode.connect(audioCtx.destination);
+
+var choosingleft = 0;
+var choosingright = 0;
+//panNode.pan.value = 0;
+var c;
+       c = setInterval(()=>{
+
+      if(vid.currentTime >= 87 && vid.currentTime <= 99){
+         //choice1
+         console.log(panvalue);
+               if(info > document.body.clientWidth/2){
+                   choosingright++;
+                   panvalue += 0.02;
+               }
+               else {
+                   choosingleft++;
+                   panvalue -= 0.02;
+               }
+                   var total = choosingleft + choosingright;
+                   if(total >= 50){
+                       if(choosingleft >= choosingright){
+                         console.log("choosingleft1");
+                         vid.currentTime = 208;
+                         leftaudiofadeout();
+                         }
+                         else{
+                           console.log("choosingright");
+                           rightaudiofadeout();
+                           choosingright = 0;
+                         }
+                         choosingleft = 0;
+                         choosingright = 0;
+                         total = 0;
+                   }
+         }
+         if(vid.currentTime >= 206 && vid.currentTime <= 207){
+           vid.currentTime = 270;
+         }
+
+
+         if(vid.currentTime >= 290 && vid.currentTime <= 296){
+         //choice2
+             if(info > document.body.clientWidth/2){
+               choosingright++;
+               panvalue += 0.02;
+             }
+             else {
+               choosingleft++;
+               panvalue -= 0.02;
+             }
+             var total = choosingleft + choosingright;
+             if(total >= 50){
+                 if(choosingleft >= choosingright){
+                   console.log("choosingleft2");
+                   vid.currentTime = 389;
+                   leftaudiofadeout();
+                   }
+                   else{
+                     console.log("choosingright");
+                     rightaudiofadeout();
+                     //vid.currentTime = 96;
+                     choosingright = 0;
+                   }
+                   choosingleft = 0;
+                   choosingright = 0;
+                   total = 0;
+             }
+         }
+         if(vid.currentTime >= 387 && vid.currentTime <= 388){
+           vid.currentTime = 517;
+         }
+
+
+         if(vid.currentTime >= 528 && vid.currentTime <= 530){
+         //choice3
+             if(info > document.body.clientWidth/2){
+               choosingright++;
+               panvalue += 0.02;
+             }
+             else {
+               choosingleft++;
+               panvalue -= 0.02;
+             }
+             var total = choosingleft + choosingright;
+             if(total >= 50){
+                 if(choosingleft >= choosingright){
+                   console.log("choosingleft3");
+                   vid.currentTime = 550;
+                   leftaudiofadeout();
+                   }
+                   else{
+                     console.log("choosingright");
+                     rightaudiofadeout();
+                     //vid.currentTime = 96;
+                     choosingright = 0;
+                   }
+                   choosingleft = 0;
+                   choosingright = 0;
+                   total = 0;
+             }
+         }
+		   if(vid.currentTime >=  548 && vid.currentTime <= 549){
+           vid.currentTime = 572;
+         }
+		   if(vid.currentTime >= 619 && vid.currentTime <= 620){
+			
+            vid.currentTime =0;
+           vid.pause();
+}
+
+
+if(panvalue >= 1){
+  panvalue = 1;
+}
+else if(panvalue <= -1){
+  panvalue = -1;
+}
+
+
+  panNode.pan.value = panvalue;
+
+      }, 100);
+
+}
+
+
+function rightaudiofadeout(){
+//panNode.pan.value = 1;
+  var setVolume = 0;  // Target volume level for old song
+  var speed = 0.02;  // Rate of volume decrease
+  //console.log(panvalue);
+  var fAudio = setInterval(function(){
+    console.log(panvalue);
+      panvalue -= speed;
+      if(panvalue <= setVolume){
+        panvalue = 0;
+        console.log("fadeout");
+        clearInterval(fAudio);
+      };
+  },100);
+}
+function leftaudiofadeout(){
+//panNode.pan.value = -1;
+  var setVolume = 0;  // Target volume level for old song
+  var speed = 0.02;  // Rate of volume decrease
+  //console.log(panvalue);
+  var fAudio = setInterval(function(){
+      console.log(panvalue);
+      panvalue += speed;
+      if(panvalue >= setVolume){
+        panvalue = 0;
+        console.log("fadeout");
+        clearInterval(fAudio);
+      };
+  },100);
+}
+
+</script>
+
+   </body>
+</html>
