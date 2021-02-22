@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SA SIDE </title>
+<link rel="icon" href="spirale.png" type="image/png" sizes="5x5">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="javascriptimagesphotography.js"></script>
+
+<script>//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");
+		
+		
+	});</script>
+<style>
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    opacity: 0; 
+	background-color:black;
+    transition: opacity 0.5s; 
+} 
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#spirale
+  position: relative;
+
+  z-index:2;
+	height:75px;
+}
+
+#nameimgtext{
+  position: relative;
+
+  z-index:1;
+  text-align:center;
+	height:30px;
+}
+
+#myVideo {
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+	
+}
+#logoandmenu{position:absolute;    transform: translateX(-50%) translateY(-50%);top:40%; left:50%; text-align:center;
+}
+
+
+
+</style>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.snip1135 {
+font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  z-index:2;
+  margin-top:-2%;
+  position: relative;
+}
+
+.snip1135 li {
+  display: inline-block;
+  margin: 0 1em;
+	padding-bottom: 4px;
+}
+.snip1135 a {
+  padding: 0.5em 0;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+
+
+
+#myVideo {
+  pointer-events: none;
+}
+
+
+
+#socialimage{
+height:20px;
+  position: relative;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  #logoandmenu{
+   width:100%;
+  }
+}
+</style>
+</head>
+<body onload="document.body.style.opacity='1'"> 
+<div class="se-pre-con"></div>
+<div id="logoandmenu">
+<img id="spirale" src="spirale.png"><br>
+<img id="nameimgtext" src="sasidetitle.png">
+<ul class="snip1135">
+  <li><a href="#" onclick="location.href='home.html';" data-hover="HOME">HOME</a></li>
+  <li><a href="#" onclick="location.href='photography.html';" data-hover="ABOUT">ABOUT</a></li>
+  <li><a href="#" onclick="location.href='about.html';" data-hover="CONTACT">CONTACT</a></li>
+</ul>
+
+
+</div>
+<video preload="auto" autoplay muted loop id="myVideo">
+  <source src="backgroundgif.mp4"  type="video/mp4">
+</video>
+</body>
+
+</html>
