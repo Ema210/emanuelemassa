@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> SA SIDE </title>
-<link rel="icon" href="spirale.png" type="image/png" sizes="5x5">
+<title> Emanuele Massa - Portfolio </title>
+<link rel="icon" href="tab.png" type="image/png" sizes="5x5">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="javascriptimagesphotography.js"></script>
 
@@ -68,19 +68,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-#spirale
-  position: relative;
 
-  z-index:2;
-	height:75px;
-}
 
 #nameimgtext{
   position: relative;
-
-  z-index:1;
-  text-align:center;
-	height:30px;
+  transform: translate(-50%, -50%);
+    z-index:1;
+	filter: invert(100%);height:60px;
 }
 
 #myVideo {
@@ -92,28 +86,47 @@ table {
     transform: translateX(-50%) translateY(-50%);
 	
 }
-#logoandmenu{position:absolute;    transform: translateX(-50%) translateY(-50%);top:40%; left:50%; text-align:center;
-}
+
 
 
 
 </style>
 
 
+<style>/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(loading.gif) center no-repeat #000000;
+}
+</style>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,&display=swap');
 .snip1135 {
-font-family: 'Raleway', sans-serif;
+  font:normal normal normal 15px/1.4em oswald-extralight,oswald,sans-serif;
   text-align: center;
+  text-transform: uppercase;
   font-weight: 500;
   z-index:2;
-  margin-top:-2%;
   position: relative;
+  transform: translate(-50%, -50%);
 }
-
+.snip1135 * {
+  box-sizing: border-box;
+}
 .snip1135 li {
   display: inline-block;
-  margin: 0 1em;
+  list-style: outside none none;
+  margin: 0 0.5em;
+    border-bottom: 1px solid white;
 	padding-bottom: 4px;
 }
 .snip1135 a {
@@ -123,15 +136,54 @@ font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   text-decoration: none;
 }
-
-
-
-
+.snip1135 a:before,
+.snip1135 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1135 a:before {
+  bottom: 0;
+  display: block;
+  height: 4px;
+  width: 0%;
+  content: "";
+  background-color: white;
+}
+.snip1135 a:after {
+  left: 0;
+  top: 0;
+  padding: 0.54em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.snip1135 a:hover:before,
+.snip1135 .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.snip1135 a:hover:after,
+.snip1135 .current a:after {
+  max-width: 100%;
+}
 #myVideo {
   pointer-events: none;
 }
+#logoandmenu{position:absolute;top:50%; left:50%; 
+}
 
-
+#social{
+position: absolute;
+width:auto;
+height:30px;
+top:150%;
+text-align:center;  align-items: center;
+  justify-content: center;transform: translate(-50%, -50%);
+}
 
 #socialimage{
 height:20px;
@@ -150,18 +202,18 @@ height:20px;
 <body onload="document.body.style.opacity='1'"> 
 <div class="se-pre-con"></div>
 <div id="logoandmenu">
-<img id="spirale" src="spirale.png"><br>
-<img id="nameimgtext" src="sasidetitle.png">
+
+<img id="nameimgtext" src="textname.png">
 <ul class="snip1135">
-  <li><a href="#" onclick="location.href='home.html';" data-hover="HOME">HOME</a></li>
-  <li><a href="#" onclick="location.href='photography.html';" data-hover="ABOUT">ABOUT</a></li>
-  <li><a href="#" onclick="location.href='about.html';" data-hover="CONTACT">CONTACT</a></li>
+  <li><a href="#" onclick="location.href='video.html';" data-hover="Video">VIDEO</a></li>
+  <li><a href="#" onclick="location.href='photography.html';" data-hover="Photography">PHOTOGRAPHY</a></li>
+  <li><a href="#" onclick="location.href='about.html';" data-hover="About">ABOUT</a></li>
 </ul>
 
 
 </div>
 <video preload="auto" autoplay muted loop id="myVideo">
-  <source src="backgroundgif.mp4"  type="video/mp4">
+  <source src="backgroundvideotest2.mp4"  type="video/mp4">
 </video>
 </body>
 
